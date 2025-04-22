@@ -1,8 +1,24 @@
 :root {
     --light-blue: #D7EBF6;
-    --blue: #AAD4F4;
+    --blue: #509BE7;
+    /* --light-pink: rgba(255, 215, 237, 0.7); */
+    --light-pink: rgba(255, 255, 255, 0.5);
+    --pink: #E750A3;
+    /* --light-yellow: rgba(250, 245, 216, 0.7); */
+    --light-yellow: rgba(255, 255, 255, 0.5);
+    --yellow: #D5B500;
     --dark-blue: #2163A5;
     --white: #ffffff;
+}
+
+.header {
+    background-color: #568dc5;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 200px 50px;
+    justify-content: center;
+    text-align: center;
 }
 
 body{
@@ -11,12 +27,24 @@ body{
 }
 
 .topnav{
+    position: sticky;
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 15px 25px;
+    padding: 15px 25px 10px 25px;
     align-items: center;
     height: 40px;
+}
+
+.header {
+    background-color: #D7EBF6;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 200px 50px;
+    justify-content: center;
+    text-align: center;
 }
 
 h1{
@@ -26,12 +54,11 @@ h1{
     font-weight: 200;
     line-height: 1;
     margin: 0px;
-    text-align: left;
 }
 h2{ 
     font-size: 40px;
     font-family: "inter", sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
     line-height: 0.9;
     margin: 0px;
@@ -43,7 +70,7 @@ h3{
     font-weight: 400;
     line-height: 1.0;
     font-size: 30px;
-    margin: 15px 0px 8px 0px;
+    margin: 20px 0px 8px 0px;
 }
 
 h4{ 
@@ -88,28 +115,75 @@ a:hover {
     color: black;
 }
 
+.button-box {
+    background-color: transparent;
+    border: 1px solid var(--btn-color);
+    color: var(--btn-color);
+    padding: 5px 30px;
+    border-radius: 40px;
+    transition-duration: 0.4s;
+    margin: 0px 10px;
+
+    font-style: normal; 
+    font-family: "inter", sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.button-box:hover{
+    opacity: 0.4;
+}
+
+.button-select {
+    background-color: var(--btn-color);
+    border: none;
+    color: white;
+    padding: 5px 30px;
+    border-radius: 40px;
+    transition-duration: 0.4s;
+    margin: 0px 10px;
+
+    font-style: normal; 
+    font-family: "inter", sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.button-select:hover {
+    opacity: 0.4;
+}
+
+.flex-container{
+    background-color: white;
+    padding: 40px 300px 40px 300px;
+}
+
 .flex-card{
     transition-duration: 0.4s;
     display: flex;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.3);
     align-items:flex-start;
-    width: 250px;
-    height: 250px;
-    margin: 20px 20px; 
+    width: 260px;
+    height: 260px;
+    margin: 15px; 
     padding: 20px; 
     color:black; 
     flex-direction: column;
     align-items: stretch;
+    cursor: pointer;
 }
 
 .flex-card:hover{
     transition-duration: 0.3s;
     width: 280px;
     height: 280px;
-    margin: 5px 5px;
-    background-color: rgba(255, 255, 255, 1.0);
+    margin: 0px;
+    padding: 25px;
+    background-color: white;
     opacity: 1.0;
+    cursor: pointer;
 }
 
 .featured-work{

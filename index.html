@@ -6,7 +6,7 @@
             <link rel="stylesheet" href="https://use.typekit.net/pbk3iay.css">
         </head>
         <div class="topnav">
-            <img src="assets/sign.png" height="100%" style="opacity: 100%;">
+            <img src="assets/sign.png" height="100%" style="opacity: 100%;" >
             <div style="
                 display: flex;
                 flex-direction: row;
@@ -20,7 +20,7 @@
                 </div>
         </div>
         <body>
-            <div class="flex-container" style="padding: 140px 75px">
+            <div style="padding: 140px 75px">
                 <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly;">
                     <h1 style="color:black;">
                         Hi, I'm <b>Apoorva Talwalkar</b>, 
@@ -38,43 +38,93 @@
             </div>
 
             <div>
-                <h2 style="text-align: center;">Featured Work</h2>
+                <h2 style="text-align: center; padding-bottom:20px">Featured Work</h2>
+                <div style="display: flex; flex-direction: row; justify-content: center;">
+                    <div id="button-all" class="button-select" style="--btn-color: var(--blue)">
+                        All
+                    </div>
+                    <div id="button-graphics" class="button-box" style="--btn-color: var(--pink)">
+                        Graphics
+                    </div>
+                    <div id="button-uiux" class="button-box" style="--btn-color: var(--yellow)">
+                        Interaction Design
+                    </div>
+                </div>
             </div>
-            <div class="featured-work">
 
-                <div class="flex-card">
-                    <a href="https://apoorvatalwalkar.github.io/iterative-design/" target="_blank">
-                        <img src="assets/warp_img.png" width="100%"  style="border-radius: 10px;">
-                        <h3>Warp AI</h3>
-                        <h4>Designing a multi-screen prototype for a startup</h4>
-                    </a>
-                    
+            <div class="featured-work"> </div>
 
-                </div>
-                <div class="flex-card">
-                    <a href="https://apoorvatalwalkar.github.io/responsive-redesign/" target="_blank">
-                        <img src="assets/t_cup_img.png" width="100%" style="border-radius: 10px;">
-                        <h3>Toronto Cupcakes</h3>
-                        <h4>Redesigning an existing webpage with responsive components</h4>
+            <script>
+                const cardEl = document.querySelector('.featured-work');
+                const btnAll = document.getElementById('button-all');
+                const btnGraphics = document.getElementById('button-graphics');
+                const btnUIUX = document.getElementById('button-uiux');
 
+                let allWorks = [];
 
-                    </a>
+                function setActiveButton(activeBtn) {
+                    [btnAll, btnGraphics, btnUIUX].forEach(btn => {
+                        btn.classList.remove('button-select');
+                        btn.classList.add('button-box');
+                    });
 
-                </div>
+                    activeBtn.classList.remove('button-box');
+                    activeBtn.classList.add('button-select');
+                }
 
-                <div class="flex-card">
+                // Render function that filters and updates cards
+                function renderCards(filterCategory = 'all') {
+                    cardEl.innerHTML = '';
 
-                </div>
+                    const filtered = filterCategory === 'all'
+                        ? allWorks
+                        : allWorks.filter(work => work.category === filterCategory);
 
-                <div class="flex-card">
+                    filtered.forEach(work => {
+                        // choose background color based on category
+                        // let bgColor = '';
+                        // if (work.category === 'Graphics') {
+                        //     bgColor = 'background-color: var(--light-pink);';
+                        // } else if (work.category === 'Interaction Design') {
+                        //     bgColor = 'background-color: var(--light-yellow);';
+                        // }
 
-                </div>
+                        const cardHTML = `
+                            <div class="flex-card">
+                                <a href="${work.link}" target="${work.target}">
+                                    <img src="${work.img}" width="100%" style="border-radius: 10px;">
+                                    <h3>${work.title}</h3>
+                                    <h4>${work.description}</h4>
+                                </a>
+                            </div>
+                        `;
+                        cardEl.insertAdjacentHTML('beforeend', cardHTML);
+                    });
+                }
 
-                <div class="flex-card">
+                // Fetch works
+                fetch('./works.json')
+                    .then(res => res.json())
+                    .then(data => {
+                        allWorks = data;
+                        renderCards(); // render all by default
+                    });
 
-                </div>
+                // Event listeners for buttons
+                btnAll.addEventListener('click', () => {
+                    renderCards('all');
+                    setActiveButton(btnAll);
+                });
 
-            </div>
+                btnGraphics.addEventListener('click', () => {
+                    renderCards('Graphics');
+                    setActiveButton(btnGraphics);
+                });
+
+                btnUIUX.addEventListener('click', () => {
+                    renderCards('Interaction Design');
+                    setActiveButton(btnUIUX);
+                });
+            </script>
         </body>
-
     </html>

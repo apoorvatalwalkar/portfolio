@@ -1,0 +1,42 @@
+[
+      {
+        "img": "assets/warp_img.png",
+        "title": "Warp AI",
+        "description": "Designing a multi-screen prototype for a startup",
+        "category": "Interaction Design",
+        "link": "https://apoorvatalwalkar.github.io/iterative-design/",
+        "target": "_blank"
+      },
+      {
+        "img": "assets/bean_complex.jpeg",
+        "title": "Bean",
+        "description": "Raytracing a scene of the Chicago Bean",
+        "category": "Graphics",
+        "link": "https://youtu.be/w57qFRzoXrc",
+        "target": "_blank"
+      },
+      {
+        "img": "assets/t_cup_img.png",
+        "title": "Toronto Cupcakes",
+        "description": "Redesigning an existing webpage with responsive components",
+        "category": "Interaction Design",
+        "link": "responsive-redesign/index.html",
+        "target": "_self"
+      },
+      {
+        "img": "assets/gingerbread.png",
+        "title": "Gingerbread Workshop",
+        "description": "Christmas-time hand-drawn animation",
+        "category": "Graphics",
+        "link": "https://youtu.be/mJNM1tSPV1c",
+        "target": "_blank"
+      },
+      {
+        "img": "assets/spotify_full.png",
+        "title": "Spotify View Buttons",
+        "description": "Creating more accessible components for Spotify",
+        "category":"Interaction Design",
+        "link": "https://apoorvatalwalkar.github.io/accessible-components/",
+        "target": "_blank"
+      }
+]
