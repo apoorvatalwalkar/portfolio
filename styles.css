@@ -116,7 +116,6 @@ a:hover {
 }
 
 .button-box {
-    background-color: transparent;
     border: 1px solid var(--btn-color);
     color: var(--btn-color);
     padding: 5px 30px;
