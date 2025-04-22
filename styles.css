@@ -1,0 +1,121 @@
+:root {
+    --light-blue: #D7EBF6;
+    --blue: #AAD4F4;
+    --dark-blue: #2163A5;
+    --white: #ffffff;
+}
+
+body{
+    background-color: var(--light-blue);
+    margin: 0px;
+}
+
+.topnav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 25px;
+    align-items: center;
+    height: 40px;
+}
+
+h1{
+    font-size: 60px;
+    font-family: "inter", sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 1;
+    margin: 0px;
+    text-align: left;
+}
+h2{ 
+    font-size: 40px;
+    font-family: "inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 0.9;
+    margin: 0px;
+}
+h3{ 
+    font-family: "inter", sans-serif;
+    font-style: normal;
+    color: black;
+    font-weight: 400;
+    line-height: 1.0;
+    font-size: 30px;
+    margin: 15px 0px 8px 0px;
+}
+
+h4{ 
+    font-family: "aktiv-grotesk", sans-serif;
+    font-style: normal;
+    color: black;
+    font-weight: 400;
+    line-height: 1.0;
+    font-size: 15px;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+h5{ 
+    font-style: normal; 
+    font-family: "aktiv-grotesk", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 2px 0px;
+    line-height: 1.5;
+    color: #568dc5;
+}
+
+p{
+    font-family: "aktiv-grotesk", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin: 10px 0px;
+    line-height: 1.2;
+}
+
+a {
+    color: #568dc5;
+    text-decoration: none;
+    font-family: "inter", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+a:hover {
+    transition-duration: 0.3s;
+    color: black;
+}
+
+.flex-card{
+    transition-duration: 0.4s;
+    display: flex;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    align-items:flex-start;
+    width: 250px;
+    height: 250px;
+    margin: 20px 20px; 
+    padding: 20px; 
+    color:black; 
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.flex-card:hover{
+    transition-duration: 0.3s;
+    width: 280px;
+    height: 280px;
+    margin: 5px 5px;
+    background-color: rgba(255, 255, 255, 1.0);
+    opacity: 1.0;
+}
+
+.featured-work{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 100px;
+}
