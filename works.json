@@ -38,5 +38,21 @@
         "category":"Interaction Design",
         "link": "https://apoorvatalwalkar.github.io/accessible-components/",
         "target": "_blank"
+      },
+      {
+        "img": "assets/fem.png",
+        "title": "FEM",
+        "description": "Implementing the Finite Element Method",
+        "category": "Graphics",
+        "link": "placeholder.html",
+        "target": "_self"
+      },
+      {
+        "img": "assets/arap.png",
+        "title": "ARAP",
+        "description": "Implementing As Rigid As Possible deformation for meshes",
+        "category": "Graphics",
+        "link": "placeholder.html",
+        "target": "_self" 
       }
 ]
