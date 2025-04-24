@@ -6,7 +6,7 @@
             <link rel="stylesheet" href="https://use.typekit.net/pbk3iay.css">
         </head>
         <div class="topnav">
-            <img src="assets/sign.png" height="100%" style="opacity: 100%;" >
+            <a href="" style="height:110%"> <img src="assets/sign.png" height="100%" style="opacity: 100%;" ></a>
             <div style="
                 display: flex;
                 flex-direction: row;
@@ -93,8 +93,9 @@
                             <div class="flex-card">
                                 <a href="${work.link}" target="${work.target}">
                                     <img src="${work.img}" width="100%" style="border-radius: 10px;">
-                                    <h3>${work.title}</h3>
-                                    <h4>${work.description}</h4>
+                                    <h4>${work.title}</h4>
+                                    <h5>${work.description}</h5>
+                                    <h5 style="font-weight: 400">${work.medium}</h5>
                                 </a>
                             </div>
                         `;

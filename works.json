@@ -1,11 +1,12 @@
 [
       {
-        "img": "assets/warp_img.png",
+        "img": "assets/warp_gif.gif",
         "title": "Warp AI",
         "description": "Designing a multi-screen prototype for a startup",
         "category": "Interaction Design",
         "link": "https://apoorvatalwalkar.github.io/iterative-design/",
-        "target": "_blank"
+        "target": "_blank",
+        "medium": "Figma • 2025"
       },
       {
         "img": "assets/bean_complex.jpeg",
@@ -13,7 +14,8 @@
         "description": "Raytracing a scene of the Chicago Bean",
         "category": "Graphics",
         "link": "https://youtu.be/w57qFRzoXrc",
-        "target": "_blank"
+        "target": "_blank",
+        "medium": "C++ • 2024"
       },
       {
         "img": "assets/t_cup_img.png",
@@ -21,7 +23,8 @@
         "description": "Redesigning an existing webpage with responsive components",
         "category": "Interaction Design",
         "link": "responsive-redesign/",
-        "target": "_self"
+        "target": "_self",
+        "medium": "HTML • 2025"
       },
       {
         "img": "assets/gingerbread.png",
@@ -29,15 +32,8 @@
         "description": "Christmas-time hand-drawn animation",
         "category": "Graphics",
         "link": "https://youtu.be/mJNM1tSPV1c",
-        "target": "_blank"
-      },
-      {
-        "img": "assets/spotify_full.png",
-        "title": "Spotify View Buttons",
-        "description": "Creating more accessible components for Spotify",
-        "category":"Interaction Design",
-        "link": "https://apoorvatalwalkar.github.io/accessible-components/",
-        "target": "_blank"
+        "target": "_blank",
+        "medium": "Adobe Fresco • 2024"
       },
       {
         "img": "assets/fem.png",
@@ -45,14 +41,25 @@
         "description": "Implementing the Finite Element Method",
         "category": "Graphics",
         "link": "placeholder.html",
-        "target": "_self"
+        "target": "_self",
+        "medium": "C++ • 2025"
       },
       {
-        "img": "assets/arap.png",
+        "img": "assets/spotify.gif",
+        "title": "Spotify View Buttons",
+        "description": "Creating more accessible components for Spotify",
+        "category":"Interaction Design",
+        "link": "https://apoorvatalwalkar.github.io/accessible-components/",
+        "target": "_blank",
+        "medium": "Figma • 2025"
+      },
+      {
+        "img": "assets/arap.gif",
         "title": "ARAP",
         "description": "Implementing As Rigid As Possible deformation for meshes",
         "category": "Graphics",
         "link": "placeholder.html",
-        "target": "_self" 
+        "target": "_self" ,
+        "medium": "C++ • 2025"
       }
 ]

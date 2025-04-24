@@ -69,33 +69,33 @@ h3{
     color: black;
     font-weight: 400;
     line-height: 1.0;
-    font-size: 30px;
+    font-size: 40px;
     margin: 20px 0px 8px 0px;
 }
 
 h4{ 
-    font-family: "aktiv-grotesk", sans-serif;
+    font-family: "inter", sans-serif;
     font-style: normal;
-    color: black;
+    color: rgba(0, 0, 0, 0.8);
     font-weight: 400;
     line-height: 1.0;
-    font-size: 15px;
+    font-size: 25px;
     margin: 0px;
-    margin-bottom: 20px;
+    margin: 20px 0px 8px 0px;
 }
 
 h5{ 
     font-style: normal; 
-    font-family: "aktiv-grotesk", sans-serif;
-    font-weight: 600;
-    font-size: 20px;
+    font-family: "inter", sans-serif;
+    font-weight: 200;
+    font-size: 18px;
     margin: 2px 0px;
-    line-height: 1.5;
-    color: #568dc5;
+    line-height: 1.4;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 p{
-    font-family: "aktiv-grotesk", sans-serif;
+    font-family: "inter", sans-serif;
     font-weight: 300;
     font-size: 18px;
     margin: 10px 0px;
@@ -164,8 +164,8 @@ a:hover {
     display: flex;
     border-radius: 20px;
     align-items:flex-start;
-    width: 260px;
-    height: 260px;
+    width: 330px;
+    height: 350px;
     margin: 15px; 
     padding: 20px; 
     color:black; 
@@ -176,8 +176,8 @@ a:hover {
 
 .flex-card:hover{
     transition-duration: 0.3s;
-    width: 280px;
-    height: 280px;
+    width: 350px;
+    height: 370px;
     margin: 0px;
     padding: 25px;
     background-color: white;
@@ -190,5 +190,5 @@ a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px 100px;
+    margin: 20px 50px;
 }
