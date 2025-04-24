@@ -20,25 +20,28 @@
                 </div>
         </div>
         <body>
-            <div style="padding: 140px 75px">
+            <div style="padding: 130px 75px">
                 <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly;">
-                    <h1 style="color:black;">
-                        Hi, I'm <b>Apoorva Talwalkar</b>, 
-                        <br>
-                        a sophomore at Brown 
-                        <br>
-                        University with a passion for 
-                        <br>
-                        <b>Computer Graphics</b> and 
-                        <br>
-                        UI/UX Design
-                    </h1>
+                    <div style="display: flex; flex-direction: column;">
+                        <h2 style="color:black;">
+                            Hi, I'm <b>Apoorva Talwalkar</b>, 
+                            <br>
+                            a sophomore at Brown 
+                            <br>
+                            University with a passion 
+                            <br>for <b>Computer Graphics</b> 
+                            <br>
+                            and UI/UX Design
+                        </h2>
+                        <h5 style="font-size: 25px; margin-top: 20px">Double-majoring in <b>Computer Science</b> and <b>Visual Arts</b> <br> Graduating May 2027</h5>
+                    </div>
+                    
                     <img src="assets/profile_oval.png" width="30%">
                 </div>
             </div>
 
             <div>
-                <h2 style="text-align: center; padding-bottom:20px">Featured Work</h2>
+                <h3 style="text-align: center; padding-bottom:20px">Featured Work</h3>
                 <div style="display: flex; flex-direction: row; justify-content: center; padding-bottom: 10px;">
                     <div id="button-all" class="button-select" style="--btn-color: var(--blue)">
                         All
@@ -52,7 +55,7 @@
                 </div>
             </div>
 
-            <div class="featured-work"> </div>
+            <div class="featured-work" style="margin-bottom: 50px;"> </div>
 
             <script>
                 const cardEl = document.querySelector('.featured-work');
@@ -128,4 +131,19 @@
                 });
             </script>
         </body>
+        <footer style="margin-top:50px">
+                <div style="display:flex; flex-direction: row; justify-content: center; height: 50px">
+                    <a href="https://www.linkedin.com/in/apoorva-talwalkar-b5b3b82a0/" target="_blank" style="margin-right:20px">
+                        <img src="assets/linkedin_logo.png" height="80%">
+                    </a>
+                    <a href="mailto:apoorva_talwalkar@brown.edu" target="_blank" style="margin-right:20px">
+                        <img src="assets/gmail_logo.png" height="90%">
+                    </a>
+                    <a href="https://www.instagram.com/artby_apoorva/" target="_blank" style="margin-right:20px">
+                        <img src="assets/intagram_logo.png" height="80%">
+                    </a>
+                </div>
+                <h5>Designed and Coded by Apoorva Talwalkar</h5>
+            
+        </footer>
     </html>

@@ -30,7 +30,7 @@
         "img": "assets/gingerbread.png",
         "title": "Gingerbread Workshop",
         "description": "Christmas-time hand-drawn animation",
-        "category": "Graphics",
+        "category": "Animation",
         "link": "https://youtu.be/mJNM1tSPV1c",
         "target": "_blank",
         "medium": "Adobe Fresco • 2024"
@@ -51,7 +51,7 @@
         "category":"Interaction Design",
         "link": "https://apoorvatalwalkar.github.io/accessible-components/",
         "target": "_blank",
-        "medium": "Figma • 2025"
+        "medium": "Case Study • Figma • 2025"
       },
       {
         "img": "assets/arap.gif",
