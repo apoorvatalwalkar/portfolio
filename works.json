@@ -1,5 +1,14 @@
 [
       {
+        "img": "assets/bean_complex.png",
+        "title": "Bean",
+        "description": "Raytracing a scene of the Chicago Bean",
+        "category": "Graphics",
+        "link": "./featured-works/bean/",
+        "target": "_self",
+        "medium": "C++ • 2024"
+      },
+      {
         "img": "assets/warp_gif.gif",
         "title": "Warp AI",
         "description": "Designing a multi-screen prototype for a startup",
@@ -9,40 +18,13 @@
         "medium": "Figma • 2025"
       },
       {
-        "img": "assets/bean_complex.jpeg",
-        "title": "Bean",
-        "description": "Raytracing a scene of the Chicago Bean",
-        "category": "Graphics",
-        "link": "./featured-works/bean/",
-        "target": "_self",
-        "medium": "C++ • 2024"
-      },
-      {
         "img": "assets/t_cup_img.png",
         "title": "Toronto Cupcakes",
         "description": "Redesigning an existing webpage with responsive components",
         "category": "Interaction Design",
         "link": "featured-works/responsive-redesign/",
         "target": "_self",
-        "medium": "HTML • 2025"
-      },
-      {
-        "img": "assets/gingerbread.png",
-        "title": "Gingerbread Workshop",
-        "description": "Christmas-time hand-drawn animation",
-        "category": "Animation",
-        "link": "https://youtu.be/mJNM1tSPV1c",
-        "target": "_blank",
-        "medium": "Adobe Fresco • 2024"
-      },
-      {
-        "img": "assets/fem.png",
-        "title": "FEM",
-        "description": "Implementing the Finite Element Method",
-        "category": "Graphics",
-        "link": "placeholder.html",
-        "target": "_self",
-        "medium": "C++ • 2025"
+        "medium": "Case Study • HTML • 2025"
       },
       {
         "img": "assets/spotify.gif",
@@ -52,6 +34,15 @@
         "link": "https://apoorvatalwalkar.github.io/accessible-components/",
         "target": "_blank",
         "medium": "Case Study • Figma • 2025"
+      },
+      {
+        "img": "assets/fem.png",
+        "title": "FEM",
+        "description": "Simulating gravity and collisons using the Finite Element Method",
+        "category": "Graphics",
+        "link": "placeholder.html",
+        "target": "_self",
+        "medium": "C++ • 2025"
       },
       {
         "img": "assets/arap.gif",
