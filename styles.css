@@ -56,6 +56,11 @@ body{
     text-align: center;
 }
 
+hr.solid {
+    margin: 75px 0px 0px 0px;
+    border-top: 1px solid #bbb;
+}
+
 h1{
     font-size: 80px;
     font-family: "inter", sans-serif;
@@ -109,6 +114,14 @@ p{
     font-size: 18px;
     margin: 10px 0px;
     line-height: 1.2;
+}
+
+li {
+    font-family: "inter", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin: 10px 0px;
+    line-height: 1.0;
 }
 
 a {
@@ -165,7 +178,7 @@ a:hover {
 
 .flex-container{
     background-color: white;
-    padding: 40px 300px 40px 300px;
+    padding: 40px 250px 40px 250px;
 }
 
 .flex-card{
@@ -192,6 +205,14 @@ a:hover {
     background-color: white;
     opacity: 1.0;
     cursor: pointer;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 50px 0px;
 }
 
 .featured-work{
