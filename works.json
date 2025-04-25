@@ -4,7 +4,7 @@
         "title": "Warp AI",
         "description": "Designing a multi-screen prototype for a startup",
         "category": "Interaction Design",
-        "link": "./warp/index.html",
+        "link": "./featured-works/warp/",
         "target": "_self",
         "medium": "Figma • 2025"
       },
@@ -13,8 +13,8 @@
         "title": "Bean",
         "description": "Raytracing a scene of the Chicago Bean",
         "category": "Graphics",
-        "link": "https://youtu.be/w57qFRzoXrc",
-        "target": "_blank",
+        "link": "./featured-works/bean/",
+        "target": "_self",
         "medium": "C++ • 2024"
       },
       {
@@ -22,7 +22,7 @@
         "title": "Toronto Cupcakes",
         "description": "Redesigning an existing webpage with responsive components",
         "category": "Interaction Design",
-        "link": "responsive-redesign/",
+        "link": "featured-works/responsive-redesign/",
         "target": "_self",
         "medium": "HTML • 2025"
       },

@@ -1,11 +1,7 @@
 :root {
     --light-blue: #D7EBF6;
     --blue: #509BE7;
-    /* --light-pink: rgba(255, 215, 237, 0.7); */
-    --light-pink: rgba(255, 255, 255, 0.5);
     --pink: #E750A3;
-    /* --light-yellow: rgba(250, 245, 216, 0.7); */
-    --light-yellow: rgba(255, 255, 255, 0.5);
     --yellow: #D5B500;
     --dark-blue: #2163A5;
     --white: #ffffff;
@@ -178,7 +174,7 @@ a:hover {
 
 .flex-container{
     background-color: white;
-    padding: 40px 250px 40px 250px;
+    padding: 30px 250px 30px 250px;
 }
 
 .flex-card{

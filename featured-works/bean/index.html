@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="../../styles.css">
+
+<head>
+    <title>Iterative Design and Evaluation</title>
+    <link rel="stylesheet" href="https://use.typekit.net/pbk3iay.css">
+</head>
+<div class="topnav">
+    <a href="../../" style="height:110%"> <img src="../../assets/sign.png" height="100%" style="opacity: 100%;" ></a>
+    <div style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        ">
+        <a style="margin-left: 15px;margin-right:15px" href="../../">Home</a>
+        <a style="margin-left: 15px;margin-right:15px" href="../../art.html">Art</a>
+        <a style="margin-left: 15px;margin-right:15px" href="../../assets/Apoorva Talwalkar Resume.pdf" target="_blank">Resume</a>
+        <a style="margin-left: 15px;margin-right:10px" href="../../about.html">About</a>
+
+        </div>
+</div>
+<div class="header">
+    <h1>The Bean</h1>
+    <h2>A Raytracing Project</h2>
+</div>
+
+<body>
+
+    <div class="flex-container" style="padding-bottom: 20px">
+        <h5 style="text-align: center; color:black; margin-bottom:10px">CONTENTS</h5>
+        <div style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        ">
+        <a href="#context">Context</a>
+        <a href="#features">Features</a>
+        <a href="#my-contribution">My Contribution</a>
+        <a href="#results">Results</a>
+
+
+        </div>
+
+        <hr class="solid" style="margin-top: 20px;">
+
+    </div>
+
+    <div class="flex-container" id="overview">
+
+        <div class="card-container" style="padding: 0px">
+            <div style="padding-right:50px">
+                <h5>OVERVIEW</h5>
+                    <h3 style="margin-bottom: 30px;">Background</h3>
+                        <h4 style="line-height:0.5;">Collaborators</h4>
+                        <p>
+                            Annika Singh, Apoorva Talwalkar, Eleanor Park, Logan Hines
+                        </p>
+
+                        <h4 style="line-height:0.5;">Class</h4>
+                        <p>
+                            CSCI1230 Computer Graphics
+                        </p>
+
+                        <h4 style="line-height:0.5;">Timeline</h4>
+                        <p>
+                            Final Project • Fall 2024 • 4 weeks
+                        </p>
+            </div>
+            <img src="assets/bean_complex.jpeg" width="50%" style="border-radius: 20px;">
+        </div>
+        <hr class="solid">
+    </div>
+
+    <div class="flex-container" id="context">
+        <h5> PREVIOUS WORK</h5>
+        <h3 style="margin-bottom: 15px;">Context</h3>
+        <p style="margin-right: 3rem;">
+            For my final project for my Introduction to Computer Graphics, me and three of my classmates decided to try and raytrace the Chicago Bean. Raytracing is a rendering method that shoots rays out of the camera
+            towards a scene and follows those rays as they bounce off shiny object and interact with lights. We had already built our own raytracers for earlier projects in the course and we were looking to build on this base.
+        </p>
+
+        <hr class="solid">
+    </div>
+
+    <div class="flex-container" id="features">
+        <h5>WHAT WE IMPLEMENTED</h5>
+        <h3>Features</h3>
+        <P>
+            We decided to raytrace the Chicago Bean because it was a significant increase in complexity from our raytracer. Firstly, the shape of the bean is something we hadn't encountered previously. We implemented a <b>.obj loader</b>
+            and imported <b>complex meshes</b> to be raytraced. We also had to create a <b>complex scene</b> made of buildings and people to show in the reflection. On top of this we implemented an <b>acceleration structure</b>, <b>camera movement</b>, <b>occlusion</b>, and <b>motion blur</b>.
+        </P>
+        <hr class="solid">
+    </div>
+
+    <div class="flex-container" id="my-contribution">
+        <h5>WHAT I DID</h5>
+        <h3 style="padding-bottom:10px">My Contribution</h3>
+
+        <h4>Base Raytracer</h4>
+        <p>We built the project around the raytracer I had coded for the previous projects in the class.</p>
+
+        <h4>Acceleration Structure</h4>
+        <p> 
+            Firstly, I implemented a <b>BVH</b> or <b>Bounding Volume Hierarchy</b> to speed up the raytracing process. What this does is create a cube around all of the objects in the scene to raytrace. 
+            We do this because a cube is much quicker to raytrace than sphere, cones, etc. because it's implicit equation just consists of 6 planes. Since we are raytracing such a complex scene, this reduced the rendering time significantly allowing us to run and test much faster.
+        </p>
+
+        <h4>Camera Movement</h4>
+        <p>
+            The second feature I implemented was the camera movement. This involved changing both the <b>camera's position vector</b> and the <b>camera's look vector</b> incrementally to rotate around the bean. This involved some trig to figure out how to move the camera around a circle without
+            hardcoding the values or angle. And a lot of testing to change the increment at a small enough step to create <b>the illusion of smooth movement</b>.
+        </p>
+        <hr class="solid">
+
+    </div>
+
+    <div class="flex-container" id="results" style="padding-bottom: 100px;">
+        <h5>FINAL</h5>
+        <h3 style="padding-bottom:10px">Results</h3>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            
+            <div style="display: flex; flex-direction: column; width: 55%">
+                <h4>Takeaways</h4>
+                <p>
+                    I really enjoyed this project. I really deepened my understanding of raytracing and I learned how just a few small tweaks can make my raytracer much more realistic. 
+                    I am extremely proud of the result my team was able to produce. We found that raytracing with an extremely complex bean took up to twenty minutes. So, to generate the 180 frames we wanted for a full circle (each being 2 degrees apart), we had to cut down on the complexity of the sphere.
+                    <br> <br>In the future, I'd love to start the rendering earlier so we can produce all of the frames at that high complexity seen in the opening image or research other acceleration structures to cut down on rendering time even further.
+                </p>
+
+            </div>
+
+            <video controls style="width:40%">
+                <source src="assets/final_video.mp4" type="video/mp4" >
+            </video>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div style="display:flex; flex-direction: row; justify-content: center; height: 50px">
+        <a href="https://www.linkedin.com/in/apoorva-talwalkar-b5b3b82a0/" target="_blank" style="margin-right:20px">
+            <img src="../../assets/linkedin_logo.png" height="80%">
+        </a>
+        <a href="mailto:apoorva_talwalkar@brown.edu" target="_blank" style="margin-right:20px">
+            <img src="../../assets/gmail_logo.png" height="90%">
+        </a>
+        <a href="https://www.instagram.com/artby_apoorva/" target="_blank" style="margin-right:20px">
+            <img src="../../assets/intagram_logo.png" height="80%">
+        </a>
+    </div>
+    <h5>Designed and Coded by Apoorva Talwalkar</h5>
+
+</footer>
+
+</html>
