@@ -4,7 +4,7 @@
         "title": "Warp AI",
         "description": "Designing a multi-screen prototype for a startup",
         "category": "Interaction Design",
-        "link": "warp/index.html",
+        "link": "./warp/index.html",
         "target": "_self",
         "medium": "Figma • 2025"
       },
