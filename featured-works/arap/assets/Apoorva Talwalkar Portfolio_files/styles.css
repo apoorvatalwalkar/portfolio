@@ -23,6 +23,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 15px 25px;
+    margin-top: 50px;
 }
 
 .social-links {
@@ -44,7 +45,6 @@ footer {
 .credit h5 {
     margin: 0;
     font-weight: normal;
-    font-weight: 200;
 }
 
 @media (max-width: 768px) {
