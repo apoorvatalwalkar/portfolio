@@ -18,12 +18,13 @@
 }
 
 footer{
-    background-color: transparent;
+    background-color: #568dc5;
     padding: 15px 25px;
     display: flex; 
     flex-direction: row; 
     justify-content: space-between; 
     align-items: center;
+    height: 50px;
 }
 
 body{
