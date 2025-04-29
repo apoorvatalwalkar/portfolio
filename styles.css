@@ -17,14 +17,52 @@
     text-align: center;
 }
 
-footer{
-    background-color: transparent;
+footer {
+    background-color: transparent; /* Light blue background like in your images */
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    padding: 15px 25px 15px 25px;
     align-items: center;
-    height: 40px;
+    padding: 15px 25px;
+    margin-top: 50px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+}
+
+.social-links a {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.social-links img {
+    height: 24px; /* Fixed height instead of percentage */
+    width: auto;
+}
+
+.credit h5 {
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Media query for tablets and mobile devices */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .credit {
+        width: 100%;
+    }
 }
 
 body{
