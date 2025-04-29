@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="../../styles.css">
 
 <head>
-    <title>Iterative Design and Evaluation</title>
+    <title>The Bean</title>
     <link rel="stylesheet" href="https://use.typekit.net/pbk3iay.css">
 </head>
 <div class="topnav">
@@ -67,7 +67,11 @@
                             Final Project • Fall 2024 • 4 weeks
                         </p>
             </div>
-            <img src="assets/bean_complex.jpeg" width="50%" style="border-radius: 20px;">
+            <div style=" width: 50%; display:flex; flex-direction: column; justify-content: center; text-align: center; gap:10px">
+                <img src="assets/bean_complex.jpeg" style="border-radius: 20px;">
+                <a href="#results">Go to Final Video</a>
+            </div>
+            
         </div>
         <hr class="solid">
     </div>
@@ -106,11 +110,19 @@
             We do this because a cube is much quicker to raytrace than sphere, cones, etc. because it's implicit equation just consists of 6 planes. Since we are raytracing such a complex scene, this reduced the rendering time significantly allowing us to run and test much faster.
         </p>
 
-        <h4>Camera Movement</h4>
-        <p>
-            The second feature I implemented was the camera movement. This involved changing both the <b>camera's position vector</b> and the <b>camera's look vector</b> incrementally to rotate around the bean. This involved some trig to figure out how to move the camera around a circle without
-            hardcoding the values or angle. And a lot of testing to change the increment at a small enough step to create <b>the illusion of smooth movement</b>.
-        </p>
+        <div style="display: flex; flex-direction: row;  gap:40px; align-items: flex-start; margin-top: 20px; align-items: center;">
+            <img src="assets/360_video.gif" width="40%" style="border-radius: 15px;">
+            <div style="display: flex;flex-direction: column;">
+                <h4 style="margin-top: 0px;">Camera Movement</h4>
+                <p>
+                    The second feature I implemented was the camera movement. This involved changing both the <b>camera's position vector</b> and the <b>camera's look vector</b> incrementally to rotate around the bean. To render a full circle, I experimented with rendering 120, 180, 240, and 260 frames to test how many
+                    frames were needed to create <b>the illusion of smooth movement</b>. Incrementally changing the position and look of the camera involved using trig to figure out how to move the camera around a circle without
+                    hardcoding the values or angle. I enjoyed testing the camera movement of camera movement on existing scenes.
+                </p>
+            </div>
+        </div>
+
+        
         <hr class="solid">
 
     </div>

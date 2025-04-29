@@ -40,7 +40,7 @@
         "title": "FEM",
         "description": "Simulating gravity and collisons using the Finite Element Method",
         "category": "Graphics",
-        "link": "placeholder.html",
+        "link": "featured-works/fem/",
         "target": "_self",
         "medium": "C++ • 2025"
       },
