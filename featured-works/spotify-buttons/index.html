@@ -42,130 +42,131 @@
 
                 </div>
 
-            <div style="display: flex; flex-direction: column;">
-
-                <div class="flex-container" id="context">
-                    <h5>CONTEXT</h5>
-                    <h3>About the Project</h3>
-                    <p style="margin-bottom:10px;">
-                        For this project, I aimed to redesign the dropdown component for Spotify as a case study into creating more accessible and usable components. I chose the 
-                        <b>Sort By</b> and <b>View As</b> combined dropdown because I think that the current UI is confusing. 
-                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                        <h4 style="text-align: center; margin-bottom:15px;">Final Design</h4>
-                        <img src="assets/final.gif" width="50px" style="border-radius: 20px;">
-                    </div>
-                    
-                    
-                    <hr class="solid">
-                </div>
-
-                <div class="flex-container" id="inputs">
-                    <h5>PART ONE</h5>
-                    <h3>Inputs and Outputs</h3>
-                    <p>
-                        First, I looked into how the existing Spotify dropdown for Sort By and View As work currently. I looked through the how the component responded through mouse, keyboard, and touch user input.
-                        I think that the dropdown for mouse and keyboard input is confusing. Since the User Interface for the two toggles--Sort by and View as--are not the same.
-                    </p>
-                    <h4>Mouse Input</h4>
-                    <div style="display: flex;flex-direction: row; justify-content: space-between;">
-                        <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
-                            <img src="assets/desktop_default.png" style="border-radius: 15px;">
-                            <h5>Default State</h5>
-                        </div>
-                        <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
-                            <img src="assets/desktop_hover.png" style="border-radius: 15px;">
-                            <h5>Hover State</h5>
-                        </div>
-                        <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
-                            <img src="assets/desktop-click.png" style="border-radius: 15px;">
-                            <h5>Clicked State</h5>
-                        </div>
-                    </div>
-
-                    <h4 style="margin-top: 30px;">Keyboard Input</h4>
-                    <div style="display: flex;flex-direction: row; justify-content: space-between;">
-                        <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
-                            <img src="assets/keyboard_default.png" style="border-radius: 15px;">
-                            <h5>Default State</h5>
-                        </div>
-                        <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
-                            <img src="assets/keyboard_focus.png" style="border-radius: 15px;">
-                            <h5>Focus State</h5>
-                        </div>
-                        <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
-                            <img src="assets/keyboard_select.png" style="border-radius: 15px;">
-                            <h5>Selected State</h5>
-                        </div>
-                    </div>
-
-                    <h4 style="margin-top:30px">Touch Input</h4>
-                    <div style="display: flex;flex-direction: row; justify-content: center; gap: 50px">
-                        <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
-                            <img src="assets/touch_default.jpg" style="border-radius: 15px;">
-                            <h5>Default State (List View)</h5>
-                        </div>
-                        <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
-                            <img src="assets/touch_select.jpg" style="border-radius: 15px;">
-                            <h5>Clicked State (Grid View)</h5>
-                        </div>
-                    </div>
-                    <hr class="solid">
-                    
-                </div>
-
-                <div class="flex-container" id="state-models">
-                    <h5>PART TWO</h5>
-                    <h3>State Models</h3>
-                    <p>
-                        Next, I modeled the current and proposed revised designs by creating state models.
-                    </p>
-                    <h4 style="margin-bottom:0px">Current State Model for Mouse Input</h4>
-                    <div style="justify-content: center; align-items: center; text-align: center;">
-                        <img src="assets/mouse_original_state_model.png" width="80%">
-                    </div>
-
-                    <h4 style="margin-top: 50px; margin-bottom:0px">Proposed State Model for Mouse Input</h4>
-                    <div style="justify-content: center; align-items: center; text-align: center;">
-                        <img src="assets/mouse_proposed_state_model.png" width="80%">
-                    </div>
-                    <hr class="solid">
-                </div>
-
-                <div class="flex-container" id="sketches">
-                    <h5>PART THREE</h5>
-                    <h3>Redesign Sketches</h3>
-                    <p>
-                        My plan for the redesign was to split the current button into two separate components. I think that the "Sort by" and "View as" buttons should be separate toggles. The current combined dropdown is
-                        unnecessarily confusing. I addressed the main issue I had with the original dropdown: the dropdown elements for the two buttons are not consistent.
-                    </p>
-                    <h4>The Sketch</h4>
-                    <img src="assets/sketches.jpg" width="100%">
-                    <hr class="solid">
-                </div>
-
-                <div class="flex-container" id="results" style="padding-bottom: 75px">
-                    <h5>FINAL</h5>
-                    <H3>The Result</H3>
-                    <div style="display:flex; justify-content: flex-start; text-align: left; align-items: center;"
-                    
-                    >
-                    <img src="assets/final.gif" width="50%" style="border-radius: 20px;">
-                    <div style="display: flex; flex-direction: column; margin-left: 20px" >
-                        <p>
-                            The resulting component splits the existing dropdown into two separate dropdowns. The dropdown components are for both buttons are made consistent.
-                        </p>
-                        <h4>
-                            Takeaways
-                        </h4>
-                        <p style="margin-top: 0px;">
-                            I enjoyed this deep dive into accessibility. I never needed to consider the accessibility of a page in terms of mouse vs. keyboard vs. touch input. Additionally, I liked getting to redesign
-                            a website/app that I use multiple times a day.
-                        </p>
-
-                    </div>
-                    </div>
-                </div>
                 <div style="display: flex; flex-direction: column;">
+
+                    <div class="flex-container" id="context">
+                        <h5>CONTEXT</h5>
+                        <h3>About the Project</h3>
+                        <p style="margin-bottom:10px;">
+                            For this project, I aimed to redesign the dropdown component for Spotify as a case study into creating more accessible and usable components. I chose the 
+                            <b>Sort By</b> and <b>View As</b> combined dropdown because I think that the current UI is confusing. 
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                            <h4 style="text-align: center; margin-bottom:15px;">Final Design</h4>
+                            <img src="assets/final.gif" width="50px" style="border-radius: 20px;">
+                        </div>
+                        
+                        
+                        <hr class="solid">
+                    </div>
+
+                    <div class="flex-container" id="inputs">
+                        <h5>PART ONE</h5>
+                        <h3>Inputs and Outputs</h3>
+                        <p>
+                            First, I looked into how the existing Spotify dropdown for Sort By and View As work currently. I looked through the how the component responded through mouse, keyboard, and touch user input.
+                            I think that the dropdown for mouse and keyboard input is confusing. Since the User Interface for the two toggles--Sort by and View as--are not the same.
+                        </p>
+                        <h4>Mouse Input</h4>
+                        <div style="display: flex;flex-direction: row; justify-content: space-between;">
+                            <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
+                                <img src="assets/desktop_default.png" style="border-radius: 15px;">
+                                <h5>Default State</h5>
+                            </div>
+                            <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
+                                <img src="assets/desktop_hover.png" style="border-radius: 15px;">
+                                <h5>Hover State</h5>
+                            </div>
+                            <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
+                                <img src="assets/desktop-click.png" style="border-radius: 15px;">
+                                <h5>Clicked State</h5>
+                            </div>
+                        </div>
+
+                        <h4 style="margin-top: 30px;">Keyboard Input</h4>
+                        <div style="display: flex;flex-direction: row; justify-content: space-between;">
+                            <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
+                                <img src="assets/keyboard_default.png" style="border-radius: 15px;">
+                                <h5>Default State</h5>
+                            </div>
+                            <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
+                                <img src="assets/keyboard_focus.png" style="border-radius: 15px;">
+                                <h5>Focus State</h5>
+                            </div>
+                            <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
+                                <img src="assets/keyboard_select.png" style="border-radius: 15px;">
+                                <h5>Selected State</h5>
+                            </div>
+                        </div>
+
+                        <h4 style="margin-top:30px">Touch Input</h4>
+                        <div style="display: flex;flex-direction: row; justify-content: center; gap: 50px">
+                            <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
+                                <img src="assets/touch_default.jpg" style="border-radius: 15px;">
+                                <h5>Default State (List View)</h5>
+                            </div>
+                            <div style="display: flex; flex-direction: column; width:260px; text-align: center; gap:10px">
+                                <img src="assets/touch_select.jpg" style="border-radius: 15px;">
+                                <h5>Clicked State (Grid View)</h5>
+                            </div>
+                        </div>
+                        <hr class="solid">
+                        
+                    </div>
+
+                    <div class="flex-container" id="state-models">
+                        <h5>PART TWO</h5>
+                        <h3>State Models</h3>
+                        <p>
+                            Next, I modeled the current and proposed revised designs by creating state models.
+                        </p>
+                        <h4 style="margin-bottom:0px">Current State Model for Mouse Input</h4>
+                        <div style="justify-content: center; align-items: center; text-align: center;">
+                            <img src="assets/mouse_original_state_model.png" width="80%">
+                        </div>
+
+                        <h4 style="margin-top: 50px; margin-bottom:0px">Proposed State Model for Mouse Input</h4>
+                        <div style="justify-content: center; align-items: center; text-align: center;">
+                            <img src="assets/mouse_proposed_state_model.png" width="80%">
+                        </div>
+                        <hr class="solid">
+                    </div>
+
+                    <div class="flex-container" id="sketches">
+                        <h5>PART THREE</h5>
+                        <h3>Redesign Sketches</h3>
+                        <p>
+                            My plan for the redesign was to split the current button into two separate components. I think that the "Sort by" and "View as" buttons should be separate toggles. The current combined dropdown is
+                            unnecessarily confusing. I addressed the main issue I had with the original dropdown: the dropdown elements for the two buttons are not consistent.
+                        </p>
+                        <h4>The Sketch</h4>
+                        <img src="assets/sketches.jpg" width="100%">
+                        <hr class="solid">
+                    </div>
+
+                    <div class="flex-container" id="results" style="padding-bottom: 75px">
+                        <h5>FINAL</h5>
+                        <H3>The Result</H3>
+                        <div style="display:flex; justify-content: flex-start; text-align: left; align-items: center;"
+                        
+                        >
+                        <img src="assets/final.gif" width="50%" style="border-radius: 20px;">
+                        <div style="display: flex; flex-direction: column; margin-left: 20px" >
+                            <p>
+                                The resulting component splits the existing dropdown into two separate dropdowns. The dropdown components are for both buttons are made consistent.
+                            </p>
+                            <h4>
+                                Takeaways
+                            </h4>
+                            <p style="margin-top: 0px;">
+                                I enjoyed this deep dive into accessibility. I never needed to consider the accessibility of a page in terms of mouse vs. keyboard vs. touch input. Additionally, I liked getting to redesign
+                                a website/app that I use multiple times a day.
+                            </p>
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
         </body>
         <footer>
