@@ -27,136 +27,132 @@
 
 <body>
 
-    <div class="flex-container" style="padding-bottom: 20px">
-        <h5 style="text-align: center; color:black; margin-bottom:10px">CONTENTS</h5>
-        <div style="
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        ">
-        <a href="#context">Context</a>
-        <a href="#understanding">Understanding FEM</a>
-        <a href="#internal-forces">Internal Forces</a>
-        <a href="#midpoint">Midpoint Method</a>
-        <a href="#collisions">Collisions</a>
-        <a href="#results">Results</a>
+    <div class="wrapper">
 
+        <div class="contents">
+
+            <a href="#context">Context</a>
+            <a href="#understanding">Understanding FEM</a>
+            <a href="#internal-forces">Internal Forces</a>
+            <a href="#midpoint">Midpoint Method</a>
+            <a href="#collisions">Collisions</a>
+            <a href="#results">Results</a>
 
         </div>
 
-        <hr class="solid" style="margin-top: 20px;">
+        <div style="display: flex; flex-direction: column;">
 
-    </div>
+            <div class="flex-container" id="context">
+                <h5>BACKGROUND</h5>
+                <h3 style="margin-bottom: 15px;">Context</h3>
+                <p style="margin-right: 3rem;">
+                    For this project, I implemented the <b>Finite Element Method</b> to simulate the core features for <b>basic deformable objects</b>. 
+                    This included calculating force computation, time integration, simple collision resolution to simulate <b>gravity</b> and <b>collisions</b>.
+                </p>
+                <h4>Features</h4>
+                <p>Features I implemented included gravity computation, time integration using the midpoint method, calculating internal forces, and collisions off the ground and a sphere. </p>
 
-    <div class="flex-container" id="context">
-        <h5>BACKGROUND</h5>
-        <h3 style="margin-bottom: 15px;">Context</h3>
-        <p style="margin-right: 3rem;">
-            For this project, I implemented the <b>Finite Element Method</b> to simulate the core features for <b>basic deformable objects</b>. 
-            This included calculating force computation, time integration, simple collision resolution to simulate <b>gravity</b> and <b>collisions</b>.
-        </p>
-        <h4>Features</h4>
-        <p>Features I implemented included gravity computation, time integration using the midpoint method, calculating internal forces, and collisions off the ground and a sphere. </p>
+                <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <h4 style="text-align: center">Example Simulation</h4>
+                    <img src="assets/ellipsoid_off_sphere.gif" width="50%" style="border-radius: 15px;">
+                    <h5 style="text-align: center; margin-top:20px;"><a href="#results" style="font-weight:400">Go to Results</a></h5>
 
-        <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-            <h4 style="text-align: center">Example Simulation</h4>
-            <img src="assets/ellipsoid_off_sphere.gif" width="50%" style="border-radius: 15px;">
-            <h5 style="text-align: center; margin-top:20px;"><a href="#results" style="font-weight:400">Go to Results</a></h5>
-
-        </div>
-        
+                </div>
+                
 
 
-        <hr class="solid">
-    </div>
-
-    <div class="flex-container" id="understanding">
-        <h5>GETTING STARTED</h5>
-        <h3>Understanding the Finite Element Method</h3>
-        <P>
-            The Finite Element Method (FEM) is a technique used to approximate differential equations useful for rendering. In FEM, objects are discretized and decomposed into a
-            combinations of smaller interconnected elements, in my implmentation I used tetrahedrons to make up the shapes. Calculations are done at the atomic level for each node. This includes,
-            storing the current positions, velocities, and forces and calculating the change in these values at each timestep. These calculations are combined to represent the larger equation and to approximate the larger system.
-        </P>
-        <hr class="solid">
-    </div>
-
-    <div class="flex-container" id="gravity">
-        <h5>FEATURE 1</h5>
-        <h3 style="padding-bottom:10px">Gravity</h3>
-        <p>
-            After setting up my tetrahedral mesh system, the first step was computing and applying the force of gravity. This meant simulating the acceleration of gravity on all the tetrahedra in my system to cause the objects to speed up as they fall.
-        </p>
-        <hr class="solid">
-
-    </div>
-
-    <div class="flex-container" id="internal-forces">
-        <h5>FEATURE 2</h5>
-        <h3 style="padding-bottom:10px">Elastic and Viscous Forces</h3>
-        <p>
-            To simulate the effect of an object staying together and bouncing, I had to compute both the internal elastic and viscous forces. This included computing the per-node stress and strain for the system.
-        </p>
-        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top:20px">
-            <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
-                <img src="assets/without_internal_forces.gif" width="100%" style="border-radius: 10px;">
-                <h4>Without Internal Forces</h4>
-            </div>
-            <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
-                <img src="assets/with_internal_forces.gif" width="100%" style="border-radius: 10px;">
-                <h4>With Internal Forces</h4>
+                <hr class="solid">
             </div>
 
-        </div>
-        <hr class="solid">
-
-    </div>
-
-    <div class="flex-container" id="midpoint">
-        <h5>FEATURE 3</h5>
-        <h3 style="padding-bottom:10px">Midpoint Method</h3>
-        <p>
-            The midpoint method is a mathematical technique used to more precisely approximate solutions to differential equations. It's a method that improves on Euler's method.
-            It is calculated by computing slope at the midpoint of the time interval to calculate the next step. This midpoint approach, also known as the modified Euler method, typically yields more accurate results than the Euler method. 
-        </p>
-        <hr class="solid">
-
-    </div>
-
-    <div class="flex-container" id="collisions">
-        <h5>FEATURE 4</h5>
-        <h3 style="padding-bottom:10px">Collision Simulation</h3>
-        <p>
-            I implemented collisions of two surfaces: the ground plane and a sphere embedded into the ground plane. For every node that penetrates the collider, I project it out. Then I decompose the velocity into it's normal and tangential properties so I can manipulate those by reflecting the normal and scaling the tangential.
-        </p>
-        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top:20px">
-            <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
-                <img src="assets/sphere_off_ground.gif" width="100%" style="border-radius: 10px;">
-                <h4>Collision Off Ground</h4>
-            </div>
-            <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
-                <img src="assets/sphere_off_sphere.gif" width="100%" style="border-radius: 10px;">
-                <h4>Collision Off Sphere</h4>
+            <div class="flex-container" id="understanding">
+                <h5>GETTING STARTED</h5>
+                <h3>Understanding the Finite Element Method</h3>
+                <P>
+                    The Finite Element Method (FEM) is a technique used to approximate differential equations useful for rendering. In FEM, objects are discretized and decomposed into a
+                    combinations of smaller interconnected elements, in my implmentation I used tetrahedrons to make up the shapes. Calculations are done at the atomic level for each node. This includes,
+                    storing the current positions, velocities, and forces and calculating the change in these values at each timestep. These calculations are combined to represent the larger equation and to approximate the larger system.
+                </P>
+                <hr class="solid">
             </div>
 
-        </div>
-        <hr class="solid">
+            <div class="flex-container" id="gravity">
+                <h5>FEATURE 1</h5>
+                <h3 style="padding-bottom:10px">Gravity</h3>
+                <p>
+                    After setting up my tetrahedral mesh system, the first step was computing and applying the force of gravity. This meant simulating the acceleration of gravity on all the tetrahedra in my system to cause the objects to speed up as they fall.
+                </p>
+                <hr class="solid">
 
-    </div>
-
-    <div class="flex-container" id="results" style="padding-bottom: 100px;">
-        <h5>FINAL</h5>
-        <h3 style="padding-bottom:10px">Results</h3>
-        <p>Here are some of the simulations I was able to run!</p>
-
-        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top:20px">
-            <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
-                <img src="assets/cube_off_sphere.gif" width="100%" style="border-radius: 10px;">
-            </div>
-            <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
-                <img src="assets/ellipsoid_off_ground.gif" width="100%" style="border-radius: 10px;">
             </div>
 
+            <div class="flex-container" id="internal-forces">
+                <h5>FEATURE 2</h5>
+                <h3 style="padding-bottom:10px">Elastic and Viscous Forces</h3>
+                <p>
+                    To simulate the effect of an object staying together and bouncing, I had to compute both the internal elastic and viscous forces. This included computing the per-node stress and strain for the system.
+                </p>
+                <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top:20px">
+                    <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
+                        <img src="assets/without_internal_forces.gif" width="100%" style="border-radius: 10px;">
+                        <h4>Without Internal Forces</h4>
+                    </div>
+                    <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
+                        <img src="assets/with_internal_forces.gif" width="100%" style="border-radius: 10px;">
+                        <h4>With Internal Forces</h4>
+                    </div>
+
+                </div>
+                <hr class="solid">
+
+            </div>
+
+            <div class="flex-container" id="midpoint">
+                <h5>FEATURE 3</h5>
+                <h3 style="padding-bottom:10px">Midpoint Method</h3>
+                <p>
+                    The midpoint method is a mathematical technique used to more precisely approximate solutions to differential equations. It's a method that improves on Euler's method.
+                    It is calculated by computing slope at the midpoint of the time interval to calculate the next step. This midpoint approach, also known as the modified Euler method, typically yields more accurate results than the Euler method. 
+                </p>
+                <hr class="solid">
+
+            </div>
+
+            <div class="flex-container" id="collisions">
+                <h5>FEATURE 4</h5>
+                <h3 style="padding-bottom:10px">Collision Simulation</h3>
+                <p>
+                    I implemented collisions of two surfaces: the ground plane and a sphere embedded into the ground plane. For every node that penetrates the collider, I project it out. Then I decompose the velocity into it's normal and tangential properties so I can manipulate those by reflecting the normal and scaling the tangential.
+                </p>
+                <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top:20px">
+                    <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
+                        <img src="assets/sphere_off_ground.gif" width="100%" style="border-radius: 10px;">
+                        <h4>Collision Off Ground</h4>
+                    </div>
+                    <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
+                        <img src="assets/sphere_off_sphere.gif" width="100%" style="border-radius: 10px;">
+                        <h4>Collision Off Sphere</h4>
+                    </div>
+
+                </div>
+                <hr class="solid">
+
+            </div>
+
+            <div class="flex-container" id="results" style="padding-bottom: 100px;">
+                <h5>FINAL</h5>
+                <h3 style="padding-bottom:10px">Results</h3>
+                <p>Here are some of the simulations I was able to run!</p>
+
+                <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top:20px">
+                    <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
+                        <img src="assets/cube_off_sphere.gif" width="100%" style="border-radius: 10px;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
+                        <img src="assets/ellipsoid_off_ground.gif" width="100%" style="border-radius: 10px;">
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 </body>

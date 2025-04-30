@@ -31,114 +31,108 @@
             <h2> Toronto Cupcakes</h2>
         </div>
         <body>
-            <div class="flex-container" style="padding-bottom: 20px">
-                <h5 style="text-align: center; color:black; margin-bottom:10px">CONTENTS</h5>
-                <div style="
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                ">
-                <a href="#context">Context</a>
-                <a href="#getting-started">Getting Started</a>
-                <a href="#goals">Goals</a>
-                <a href="#visual-redesign">Visual Redesign</a>
-                <a href="#results">Results</a>
+            <div class="wrapper">
+                <div class="contents">
+                    <a href="#context">Context</a>
+                    <a href="#getting-started">Getting Started</a>
+                    <a href="#goals">Goals</a>
+                    <a href="#visual-redesign">Visual Redesign</a>
+                    <a href="#results">Results</a>
 
                 </div>
 
-                <hr class="solid" style="margin-top: 20px;">
+                <div style="display: flex; flex-direction: column;">
+                    <div class="flex-container" id="context">
+                        <h5>CONTEXT</h5>
+                        <h3>About the Project</h3>
+                        <p style="margin-bottom:40px;">
+                            For this project I had to redesign an existing webpage with considerable user or accessibility issues. I decided redesign the Toronto Cupcakes's website. Toronto Cupcakes is a bakery/catering service in Toronto from whom customers can buy and order cupcakes.
+                            Currently, it is hard to determine what the company does upon first glance of their website. My redesign adresses the issues with the current website and creates a stronger brand image for the company, while keeping all of the information.
+                        </p>
+                        <h4 style="text-align: center">Final Redesign</h4>
+                        <img src="assets/preview_desktop.png" width="100%">
+                        <h5 style="text-align: center; margin-top:20px;"><a href="https://apoorvatalwalkar.github.io/toronto-cupcakes/" style="font-weight:400">Go to Website</a></h5>
 
-            </div>
+                        
+                        <hr class="solid">
+                    </div>
 
-            <div class="flex-container" id="context">
-                <h5>CONTEXT</h5>
-                <h3>About the Project</h3>
-                <p style="margin-bottom:40px;">
-                    For this project I had to redesign an existing webpage with considerable user or accessibility issues. I decided redesign the Toronto Cupcakes's website. Toronto Cupcakes is a bakery/catering service in Toronto from whom customers can buy and order cupcakes.
-                    Currently, it is hard to determine what the company does upon first glance of their website. My redesign adresses the issues with the current website and creates a stronger brand image for the company, while keeping all of the information.
-                </p>
-                <h4 style="text-align: center">Final Redesign</h4>
-                <img src="assets/preview_desktop.png" width="100%">
-                <h5 style="text-align: center; margin-top:20px;"><a href="https://apoorvatalwalkar.github.io/toronto-cupcakes/" style="font-weight:400">Go to Website</a></h5>
+                    <div class="flex-container" id="getting-started">
+                        <h5>GETTING STARTED</h5>
+                        <h3>The Current Website</h3>
+                        <p style="margin-bottom:40px;">
+                            Toronto Cupcakes is a cupcakes services that offers online ordering, delivery, and catering of specialty cupcakes in the Greater Toronto Area. Its homepage
+                            is the place where customers will first go to understand the brand and potentially order cupcakes. It should emphasize its unique features like delivery, specialty cupcakes,
+                            and custom designs and make it easy for customers to place their order as quickly as possible.
 
-                
-                <hr class="solid">
-            </div>
+                        <h4>Issues</h4>
+                        <p>
+                            While I think the goal of the website should be to efficiently point users to a place where they can order an checkout, the current website doesn't do that effectively.
+                            Not only is it hard to navigate, but the small text and low-contrast choice of colors makes it inaccessible for some users as well. WebAIM found 23 issues of low-contrant colors mainly in
+                            the hyperlinks and footer.
+                        </p>
+                        <img src="assets/problems.png" width="100%">
+                    </div>
 
-            <div class="flex-container" id="getting-started">
-                <h5>GETTING STARTED</h5>
-                <h3>The Current Website</h3>
-                <p style="margin-bottom:40px;">
-                    Toronto Cupcakes is a cupcakes services that offers online ordering, delivery, and catering of specialty cupcakes in the Greater Toronto Area. Its homepage
-                    is the place where customers will first go to understand the brand and potentially order cupcakes. It should emphasize its unique features like delivery, specialty cupcakes,
-                    and custom designs and make it easy for customers to place their order as quickly as possible.
+                    <div class="flex-container" style="background-color:var(--light-blue); padding-top:50px; padding-bottom:50px;" id="goals">
+                        <h4 style="text-align: center;">GOALS OF THE REDESIGN</h4>
+                        <p style="text-align: center; margin-bottom: 20px; margin-top:5px">Design an interface that attracts the <b>attention of users</b> and focuses it to <b>drive purchases</b></p>
+                        <h5 style="text-align: center;"><b>GAMEPLAN</b></h5>
+                        <ul style="
+                        font-family: aktiv-grotesk, sans-serif;
+                        font-weight: 300;
+                        font-size: 20px;
+                        line-height: 1.2;
+                        margin: 5px 50px">
+                            <li>Give customers easy access to "Order Now" and other important buttons</li>
+                            <li>Create a consistent color palette that builds off the original</li>
+                            <li>Include more enticing images</li>
+                            <li>Introduce a hierarchy for a better flow</li>
+                        </ul>
 
-                <h4>Issues</h4>
-                <p>
-                    While I think the goal of the website should be to efficiently point users to a place where they can order an checkout, the current website doesn't do that effectively.
-                    Not only is it hard to navigate, but the small text and low-contrast choice of colors makes it inaccessible for some users as well. WebAIM found 23 issues of low-contrant colors mainly in
-                    the hyperlinks and footer.
-                </p>
-                <img src="assets/problems.png" width="100%">
-            </div>
+                    </div>
 
-            <div class="flex-container" style="background-color:var(--light-blue); padding-top:50px; padding-bottom:50px;" id="goals">
-                <h4 style="text-align: center;">GOALS OF THE REDESIGN</h4>
-                <p style="text-align: center; margin-bottom: 20px; margin-top:5px">Design an interface that attracts the <b>attention of users</b> and focuses it to <b>drive purchases</b></p>
-                <h5 style="text-align: center;"><b>GAMEPLAN</b></h5>
-                <ul style="
-                font-family: aktiv-grotesk, sans-serif;
-                font-weight: 300;
-                font-size: 20px;
-                line-height: 1.2;
-                margin: 5px 50px">
-                    <li>Give customers easy access to "Order Now" and other important buttons</li>
-                    <li>Create a consistent color palette that builds off the original</li>
-                    <li>Include more enticing images</li>
-                    <li>Introduce a hierarchy for a better flow</li>
-                </ul>
+                    <div class="flex-container" id="visual-redesign">
+                        <h5>VISUAL REDESIGN</h5>
+                        <h3>Virtual Design Style Guide</h3>
+                        <p>When designing the Virtual Style Guide it was important for me to consider the color palette of the original website. Specifically, I found the pinks to be a good starting point to build of off. 
+                        I also did not want to change the logo since that is essential to the brand. While, I also kept a similar sans-serif font for smaller text, I introduced a more embellished serif text to introduce some variance.
+                        Additionally, all of the text is much larger and easier to read. The buttons stand out more and the colors for hyperlinked text is deeper to fix some of the previously mentioned accessibility issues.
+                        </p>
+                        <img src="assets/visual_guide.png" width="100%">
+                        <h3>Mockups</h3>
+                        <p>
+                            While I think the goal of the website should be to efficiently point users to a place where they can order an checkout, the current website doesn't do that effectively.
+                            Not only is it hard to navigate, but the small text and low-contrast choice of colors makes it inaccessible for some users as well.
+                        </p>
+                    </div>
+                    <div class="flex-container" style="padding: 0px;">
+                        <img src="assets/layouts.png" width="100%" style="align-self: center;">
+                        <hr class="solid">
+                    </div>
 
-            </div>
+                    <div class="flex-container" id="results" style="padding-bottom: 75px">
+                        <h5>FINAL</h5>
+                        <H3>The Result</H3>
+                        <div style="display:flex; justify-content: flex-start; text-align: left;"
+                        
+                        >
+                            <img src="assets/final.png" width="50%">
+                            <div style="display: flex; flex-direction: column; margin-left: 20px" >
+                                <p>The result is a responsive design that has consistent branding, purpose across the whole page, and addresses the accessibility concerns. Check out the final webpage 
+                                    <a href="https://apoorvatalwalkar.github.io/toronto-cupcakes/">here</a>.
+                                </p>
+                                <h4 style="margin-top: 30px; margin-bottom:5px;">
+                                    Takeaways
+                                </h4>
+                                <p>
+                                    This project helped me understand how important accessibility is for projects. Not only does a webpage have to be beautiful, but it should be easy to navigate for all ranges of people across many devices.
+                                    Just because something is legible on your computer, doesn't mean it will translate well onto a phone or tablet. While this project made me incredibly hungry, it was also really fun to design and code!
+                                </p>
 
-            <div class="flex-container" id="visual-redesign">
-                <h5>VISUAL REDESIGN</h5>
-                <h3>Virtual Design Style Guide</h3>
-                <p>When designing the Virtual Style Guide it was important for me to consider the color palette of the original website. Specifically, I found the pinks to be a good starting point to build of off. 
-                I also did not want to change the logo since that is essential to the brand. While, I also kept a similar sans-serif font for smaller text, I introduced a more embellished serif text to introduce some variance.
-                Additionally, all of the text is much larger and easier to read. The buttons stand out more and the colors for hyperlinked text is deeper to fix some of the previously mentioned accessibility issues.
-                </p>
-                <img src="assets/visual_guide.png" width="100%">
-                <h3>Mockups</h3>
-                <p>
-                    While I think the goal of the website should be to efficiently point users to a place where they can order an checkout, the current website doesn't do that effectively.
-                    Not only is it hard to navigate, but the small text and low-contrast choice of colors makes it inaccessible for some users as well.
-                </p>
-            </div>
-            <div class="flex-container" style="padding: 0px 160px 0px 160px;">
-                <img src="assets/layouts.png" width="100%" style="align-self: center;">
-                <hr class="solid" style="margin-left: 90px; margin-right: 90px">
-            </div>
-
-            <div class="flex-container" id="results" style="padding-bottom: 75px">
-                <h5>FINAL</h5>
-                <H3>The Result</H3>
-                <div style="display:flex; justify-content: flex-start; text-align: left;"
-                
-                >
-                <img src="assets/final.png" width="50%">
-                <div style="display: flex; flex-direction: column; margin-left: 20px" >
-                    <p>The result is a responsive design that has consistent branding, purpose across the whole page, and addresses the accessibility concerns. Check out the final webpage 
-                        <a href="https://apoorvatalwalkar.github.io/toronto-cupcakes/">here</a>.
-                    </p>
-                    <h4 style="margin-top: 30px; margin-bottom:5px;">
-                        Takeaways
-                    </h4>
-                    <p>
-                        This project helped me understand how important accessibility is for projects. Not only does a webpage have to be beautiful, but it should be easy to navigate for all ranges of people across many devices.
-                        Just because something is legible on your computer, doesn't mean it will translate well onto a phone or tablet. While this project made me incredibly hungry, it was also really fun to design and code!
-                    </p>
-
-                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </body>

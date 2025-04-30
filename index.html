@@ -20,23 +20,31 @@
             </div>
         </div>
         <body>
-            <div style="padding: 130px 75px">
+            <div style="padding: 110px 75px">
                 <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly;">
                     <div style="display: flex; flex-direction: column;">
-                        <h2 style="color:black;">
-                            Hi, I'm <b>Apoorva Talwalkar</b>, 
+                        <h1><b>Hi, I'm Apoorva!</b> </h1>
+                        <h2 style="color:black; padding-top:20px">
+                            A student with a love 
+                            <br>for Computer Graphics
                             <br>
-                            a sophomore at <b>Brown</b> 
-                            <br>
-                            University with a passion 
-                            <br>for <b>Computer Graphics</b> 
-                            <br>
-                            and <b>UI/UX Design</b>
+                            and Interaction Design
                         </h2>
-                        <h5 style="font-size: 25px; margin-top: 20px">Double-majoring in <b>Computer Science</b> and <b>Visual Arts</b> <br> Graduating May 2027</h5>
+                        <h5 style="font-size: 25px; margin-top: 10px">Graduating in 2027 from Brown University, double <br> majoring in Computer Science and Visual Arts</h5>
+                        <div class="social-links" style="margin-top:10px">
+                            <a href="https://www.linkedin.com/in/apoorva-talwalkar-b5b3b82a0/" target="_blank">
+                                <img src="assets/linkedin_logo.png" alt="LinkedIn">
+                            </a>
+                            <a href="mailto:apoorva_talwalkar@brown.edu" target="_blank">
+                                <img src="assets/gmail_logo.png" alt="Email">
+                            </a>
+                            <a href="https://www.instagram.com/artby_apoorva/" target="_blank">
+                                <img src="assets/intagram_logo.png" alt="Instagram">
+                            </a>
+                        </div>
                     </div>
                     
-                    <img class="image-hide" src="assets/profile_oval.png" width="30%">
+                    <img class="image-hide" src="assets/profile_oval.png" width="35%">
                 </div>
             </div>
 
@@ -75,7 +83,6 @@
                     activeBtn.classList.add('button-select');
                 }
 
-                // Render function that filters and updates cards
                 function renderCards(filterCategory = 'all') {
                     cardEl.innerHTML = '';
 
@@ -99,15 +106,13 @@
                     });
                 }
 
-                // Fetch works
                 fetch('./works.json')
                     .then(res => res.json())
                     .then(data => {
                         allWorks = data;
-                        renderCards(); // render all by default
+                        renderCards(); 
                     });
 
-                // Event listeners for buttons
                 btnAll.addEventListener('click', () => {
                     renderCards('all');
                     setActiveButton(btnAll);
