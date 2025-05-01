@@ -8,8 +8,8 @@
 }
 
 .header {
-    background-color: #568dc5;
-    color: white;
+    background-color: #D7EBF6;
+    color: black;
     display: flex;
     flex-direction: column;
     padding: 200px 50px;
@@ -31,13 +31,13 @@ footer {
 }
 
 .social-links a {
-    margin-right: 10px;
+    margin-right: 15px;
     display: flex;
     align-items: center;
 }
 
 .social-links img {
-    height: 30px;
+    height: 24px;
     width: auto;
 }
 
@@ -88,16 +88,6 @@ body{
     .image-hide {
         display: none;
     }
-  }
-
-.header {
-    background-color: #D7EBF6;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    padding: 200px 50px;
-    justify-content: center;
-    text-align: center;
 }
 
 hr.solid {
