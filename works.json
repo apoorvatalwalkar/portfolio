@@ -1,12 +1,12 @@
 [
-      {
-        "img": "assets/bean_complex.png",
-        "title": "Bean",
-        "description": "Raytracing a scene of the Chicago Bean",
-        "category": "Graphics",
-        "link": "./featured-works/bean/",
-        "target": "_self",
-        "medium": "C++ • 2024"
+       {
+        "img": "assets/room_model.png",
+        "title": "Room Model",
+        "description": "An exploration into modeling, by modeling my childhood bedroom",
+        "category": "Animation",
+        "link": "featured-works/room-model/",
+        "target": "_self" ,
+        "medium": "Maya • 2025"
       },
       {
         "img": "assets/warp_gif.gif",
@@ -36,13 +36,13 @@
         "medium": "Case Study • Figma • 2025"
       },
       {
-        "img": "assets/fem.png",
-        "title": "FEM",
-        "description": "Simulating gravity and collisons using the Finite Element Method",
+        "img": "assets/bean_complex.png",
+        "title": "Bean",
+        "description": "Raytracing a scene of the Chicago Bean",
         "category": "Graphics",
-        "link": "featured-works/fem/",
+        "link": "./featured-works/bean/",
         "target": "_self",
-        "medium": "C++ • 2025"
+        "medium": "C++ • 2024"
       },
       {
         "img": "assets/arap.gif",
@@ -52,5 +52,24 @@
         "link": "featured-works/arap/",
         "target": "_self" ,
         "medium": "C++ • 2025"
+      },
+      {
+        "img": "assets/animation.gif",
+        "title": "Gingerbread Workshop",
+        "description": "A festive Christmas-time hand drawn animation",
+        "category": "Animation",
+        "link": "featured-works/gingerbread/",
+        "target": "_self" ,
+        "medium": "Adobe Fresco • 2024"
+      },
+      {
+        "img": "assets/fem.png",
+        "title": "FEM",
+        "description": "Simulating gravity and collisons using the Finite Element Method",
+        "category": "Graphics",
+        "link": "featured-works/fem/",
+        "target": "_self",
+        "medium": "C++ • 2025"
       }
+      
 ]

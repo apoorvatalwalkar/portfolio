@@ -60,7 +60,10 @@
                     <button id="button-graphics" class="button-box" style="--btn-color: var(--pink)">
                         Graphics
                     </button>
-                    <button id="button-uiux" class="button-box" style="--btn-color: var(--yellow)">
+                    <button id="button-animation" class="button-box" style="--btn-color: var(--purple)">
+                        Animation/Modeling
+                    </button>
+                    <button id="button-uiux" class="button-box" style="--btn-color: var(--dark-blue)">
                         Interaction Design
                     </button>
                 </div>
@@ -72,12 +75,13 @@
                 const cardEl = document.querySelector('.featured-work');
                 const btnAll = document.getElementById('button-all');
                 const btnGraphics = document.getElementById('button-graphics');
+                const btnAnimation = document.getElementById('button-animation');
                 const btnUIUX = document.getElementById('button-uiux');
 
                 let allWorks = [];
 
                 function setActiveButton(activeBtn) {
-                    [btnAll, btnGraphics, btnUIUX].forEach(btn => {
+                    [btnAll, btnGraphics, btnAnimation, btnUIUX].forEach(btn => {
                         btn.classList.remove('button-select');
                         btn.classList.add('button-box');
                     });
@@ -124,6 +128,11 @@
                 btnGraphics.addEventListener('click', () => {
                     renderCards('Graphics');
                     setActiveButton(btnGraphics);
+                });
+
+                btnAnimation.addEventListener('click', () => {
+                    renderCards('Animation');
+                    setActiveButton(btnAnimation);
                 });
 
                 btnUIUX.addEventListener('click', () => {

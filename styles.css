@@ -1,8 +1,9 @@
 :root {
     --light-blue: #D7EBF6;
     --blue: #509BE7;
-    --pink: #E750A3;
+    --pink: #c852a2;
     --yellow: #D5B500;
+    --purple: #6321a5;
     --dark-blue: #2163A5;
     --white: #ffffff;
 }
@@ -182,7 +183,7 @@ a:hover {
 
     font-style: normal; 
     font-family: "inter", sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 25px;
     cursor: pointer;
 }
@@ -192,8 +193,8 @@ a:hover {
 }
 
 .button-select {
+    border: 1px solid var(--btn-color);
     background-color: var(--btn-color);
-    border: none;
     color: white;
     padding: 5px 30px;
     border-radius: 40px;
@@ -202,7 +203,7 @@ a:hover {
 
     font-style: normal; 
     font-family: "inter", sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 25px;
     cursor: pointer;
 }
