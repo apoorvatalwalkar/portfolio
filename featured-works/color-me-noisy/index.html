@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="../../styles.css">
 
 <head>
-    <title>The Bean</title>
+    <title>Color Me Noisy</title>
     <link rel="stylesheet" href="https://use.typekit.net/pbk3iay.css">
 </head>
 <div class="topnav">
@@ -21,7 +21,7 @@
         </div>
 </div>
 <div class="header">
-    <h1>The Bean</h1>
+    <h1>Color Me Noisy</h1>
     <h2>A Raytracing Project</h2>
 </div>
 
@@ -48,26 +48,26 @@
                         <h3 style="margin-bottom: 10px;">Background</h3>
                             <h4 style="line-height:0;">Collaborators</h4>
                             <p>
-                                Annika Singh, Apoorva Talwalkar, Eleanor Park, Logan Hines
+                                Apoorva Talwalkar, Lexi Henrion, Sherry Zhang, and Vivian Li
                             </p>
 
                             <h4 style="line-height:0;">Class</h4>
                             <p>
-                                CSCI1230 Computer Graphics
+                                CSCI2240 Advanced Computer Graphics
                             </p>
 
                             <h4 style="line-height:0;">Timeline</h4>
                             <p>
-                                Final Project • Fall 2024 • 4 weeks
+                                Final Project • Spring 2025 • 4 weeks
                             </p>
                     </div>
 
                     <div style="width:450px; display:flex; flex-direction: column; justify-content: center; text-align: center; gap:10px; align-items: center;">
-                        <img src="assets/bean_complex.jpeg" style="border-radius: 20px; width: 100%;">
+                        <img src="assets/flower.png" style="border-radius: 20px; width: 110%;">
                         <div style="display: flex; flex-direction: row; align-items: center; gap:10px;">
                             <a href="#results">Go to Final Video</a>
                             <p> | </p>
-                            <a href="https://github.com/apoorvatalwalkar/bean" target="_blank" style="align-items: center;">Open Github</a>
+                            <a href="https://github.com/Lenrion/ColorMeNoisy" target="_blank" style="align-items: center;">Open Github</a>
                         </div>
                         
                     </div>
@@ -80,20 +80,30 @@
                 <h5> PREVIOUS WORK</h5>
                 <h3 style="margin-bottom: 15px;">Context</h3>
                 <p style="margin-right: 3rem;">
-                    For my final project for my Introduction to Computer Graphics, me and three of my classmates decided to try and raytrace the Chicago Bean. Raytracing is a rendering method that shoots rays out of the camera
-                    towards a scene and follows those rays as they bounce off shiny object and interact with lights. We had already built our own raytracers for earlier projects in the course and we were looking to build on this base.
+                    For our final project in Advanced Computer Graphics, me and three of my classmates decided to implement the <i>olor Me Noisy: Example-based Rendering of Hand-colored Animations with Temporal Noise Control</i> paper by researchers J. Fišer from CTU in Prague, 
+                    M. Lukác from CTU in Prague, O. Jamriška from CTU in Prague, M. Čadík from the Brno University of Technology, Y. Gingold from George Mason University, P. Asente from Adobe Research, and D. Sýkora from CTU in Prague. 
+                    The paper proposes a method for rendering 3D animations with a 2D hand-colored feel by mimicking the textures of a reference texture. You can find the paper at <a href="https://dcgi.fel.cvut.cz/home/sykorad/cmn.html">this link</a>.
                 </p>
 
                 <hr class="solid">
             </div>
 
             <div class="flex-container" id="features">
-                <h5>WHAT WE IMPLEMENTED</h5>
-                <h3>Features</h3>
-                <P>
-                    We decided to raytrace the Chicago Bean because it was a significant increase in complexity from our raytracer. Firstly, the shape of the bean is something we hadn't encountered previously. We implemented a <b>.obj loader</b>
-                    and imported <b>complex meshes</b> to be raytraced. We also had to create a <b>complex scene</b> made of buildings and people to show in the reflection. On top of this we implemented an <b>acceleration structure</b>, <b>camera movement</b>, <b>occlusion</b>, and <b>motion blur</b>.
-                </P>
+                <h5>OVERVIEW</h5>
+                <h3>Implementation</h3>
+                <p>
+                    Here is a high-level overview of the overall implementation:
+                    <ol>
+                        <li>Predeform</li>
+                        <li>Image Pyramids</li>
+                        <li>Upsample / Downsample</li>
+                        <li>Patch Match</li>
+                        <li>Results</li>
+                    </ol>
+                    <p>
+                        At a high level, our pipeline mirrors the paper’s: given a target animation frame and a reference texture, we synthesize a noisy, hand-rendered-looking version by progressively refining from coarse to fine image scales. This helps reduce temporal flicker and preserves style consistency.
+                    </p>
+                </p>
                 <hr class="solid">
             </div>
 
@@ -101,26 +111,12 @@
                 <h5>WHAT I DID</h5>
                 <h3 style="padding-bottom:10px">My Contribution</h3>
 
-                <h4>Base Raytracer</h4>
-                <p>We built the project around the raytracer I had coded for the previous projects in the class.</p>
-
-                <h4>Acceleration Structure</h4>
-                <p> 
-                    Firstly, I implemented a <b>BVH</b> or <b>Bounding Volume Hierarchy</b> to speed up the raytracing process. What this does is create a cube around all of the objects in the scene to raytrace. 
-                    We do this because a cube is much quicker to raytrace than sphere, cones, etc. because it's implicit equation just consists of 6 planes. Since we are raytracing such a complex scene, this reduced the rendering time significantly allowing us to run and test much faster.
+                <h4>Pre-Deformation</h4>
+                <p>I handled the predeformation algorithm implementation, which involved randomly deforming the input texture image using a vector map. This prevents the texture for matching exactly across multiple frames, adding to the hand-drawn effect.
+                    The resulting deformed texture is then downsampled and then matched to the input animation. 
                 </p>
+                <img src="assets/predeformation.png" width="100%">
 
-                <div style="display: flex; flex-direction: row;  gap:40px; align-items: flex-start; margin-top: 20px; align-items: center;">
-                    <img src="assets/360_video.gif" width="40%" style="border-radius: 15px;">
-                    <div style="display: flex;flex-direction: column;">
-                        <h4 style="margin-top: 0px;">Camera Movement</h4>
-                        <p>
-                            The second feature I implemented was the camera movement. This involved changing both the <b>camera's position vector</b> and the <b>camera's look vector</b> incrementally to rotate around the bean. To render a full circle, I experimented with rendering 120, 180, 240, and 260 frames to test how many
-                            frames were needed to create <b>the illusion of smooth movement</b>. Incrementally changing the position and look of the camera involved using trig to figure out how to move the camera around a circle without
-                            hardcoding the values or angle. I enjoyed testing the camera movement of camera movement on existing scenes.
-                        </p>
-                    </div>
-                </div>
                 <hr class="solid">
             </div>
             <div class="flex-container" id="results" style="padding-bottom: 100px;">
@@ -132,15 +128,14 @@
                     <div style="display: flex; flex-direction: column; width: 45%">
                         <h4>Takeaways</h4>
                         <p>
-                            I really enjoyed this project. I really deepened my understanding of raytracing and I learned how just a few small tweaks can make my raytracer much more realistic. 
-                            I am extremely proud of the result my team was able to produce. We found that raytracing with an extremely complex bean took up to twenty minutes. So, to generate the 180 frames we wanted for a full circle (each being 2 degrees apart), we had to cut down on the complexity of the sphere.
-                            <br> <br>In the future, I'd love to start the rendering earlier so we can produce all of the frames at that high complexity seen in the opening image or research other acceleration structures to cut down on rendering time even further.
+                            I thought this project was a great opportunity to learn more about post-processing techniques in computer graphics and how computer graphics and animation can be used together.
+                            I loved running this algorithm on my teammate's animations and seeing the results, I'd love to make some of my own animations in the future and run this on them as well.
                         </p>
 
                     </div>
 
                     <video controls style="width:50%">
-                        <source src="assets/final_video.mp4" type="video/mp4">
+                        <source src="assets/final_vid.mov" type="video/mp4">
                     </video>
                 </div>
             </div>

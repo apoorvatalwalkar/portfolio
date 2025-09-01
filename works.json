@@ -38,7 +38,7 @@
       {
         "img": "assets/bean_complex.png",
         "title": "Bean",
-        "description": "Raytracing a scene of the Chicago Bean",
+        "description": "Building and raytracing a scene of the Chicago Bean",
         "category": "Graphics",
         "link": "./featured-works/bean/",
         "target": "_self",
@@ -54,15 +54,6 @@
         "medium": "C++ • 2025"
       },
       {
-        "img": "assets/animation.gif",
-        "title": "Gingerbread Workshop",
-        "description": "A festive Christmas-time hand drawn animation",
-        "category": "Animation",
-        "link": "featured-works/gingerbread/",
-        "target": "_self" ,
-        "medium": "Adobe Fresco • 2024"
-      },
-      {
         "img": "assets/fem.png",
         "title": "FEM",
         "description": "Simulating gravity and collisons using the Finite Element Method",
@@ -70,6 +61,24 @@
         "link": "featured-works/fem/",
         "target": "_self",
         "medium": "C++ • 2025"
+      },
+      {
+        "img": "assets/flower.gif",
+        "title": "Color Me Noisy",
+        "description": "Making computer generated animations look hand-drawn",
+        "category": "Animation",
+        "link": "featured-works/color-me-noisy/",
+        "target": "_self" ,
+        "medium": "C++ • 2025"
+      },
+      {
+        "img": "assets/gingerbread.png",
+        "title": "Gingerbread Workshop",
+        "description": "A festive Christmas-time hand drawn animation",
+        "category": "Animation",
+        "link": "featured-works/gingerbread/",
+        "target": "_self" ,
+        "medium": "Adobe Fresco • 2024"
       }
       
 ]
