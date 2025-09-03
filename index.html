@@ -79,6 +79,7 @@
                 const btnUIUX = document.getElementById('button-uiux');
 
                 let allWorks = [];
+                let featuredWorks = [];
 
                 function setActiveButton(activeBtn) {
                     [btnAll, btnGraphics, btnAnimation, btnUIUX].forEach(btn => {
@@ -94,8 +95,8 @@
                     cardEl.innerHTML = '';
 
                     const filtered = filterCategory === 'all'
-                        ? allWorks
-                        : allWorks.filter(work => work.category === filterCategory);
+                        ? featuredWorks
+                        : featuredWorks.filter(work => work.category === filterCategory);
 
                     filtered.forEach(work => {
 
@@ -117,6 +118,8 @@
                     .then(res => res.json())
                     .then(data => {
                         allWorks = data;
+                        // Filter only featured works (where featured is "True")
+                        featuredWorks = allWorks.filter(work => work.featured === "True");
                         renderCards(); 
                     });
 
