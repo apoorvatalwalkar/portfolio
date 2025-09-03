@@ -6,7 +6,8 @@
         "category": "Animation",
         "link": "featured-works/walk-cycle/",
         "target": "_self" ,
-        "medium": "Maya • 2025",
+        "medium": "Maya",
+        "date": "July 2025",
         "featured": "True"
       },
       {
@@ -16,7 +17,8 @@
         "category": "Animation",
         "link": "featured-works/color-me-noisy/",
         "target": "_self" ,
-        "medium": "C++ • 2025",
+        "medium": "C++",
+        "date": "May 2025",
         "featured": "True"
       },
       {
@@ -26,7 +28,8 @@
         "category": "Interaction Design",
         "link": "featured-works/responsive-redesign/",
         "target": "_self",
-        "medium": "Case Study • HTML • 2025",
+        "medium": "HTML",
+        "date": "April 2025",
         "featured": "True"
       },
       {
@@ -36,7 +39,8 @@
         "category": "Graphics",
         "link": "./featured-works/bean/",
         "target": "_self",
-        "medium": "C++ • 2024",
+        "medium": "C++",
+        "date": "December 2024",
         "featured": "False"
       },
       {
@@ -46,7 +50,8 @@
         "category":"Interaction Design",
         "link": "featured-works/spotify-buttons/",
         "target": "_self",
-        "medium": "Case Study • Figma • 2025",
+        "medium": "Figma",
+        "date": "February 2025",
         "featured": "True"
       },
       {
@@ -56,7 +61,8 @@
         "category": "Graphics",
         "link": "./featured-works/pathtracer/",
         "target": "_self",
-        "medium": "C++ • 2025",
+        "medium": "C++ ",
+        "date": "February 2025",
         "featured": "True"
       },
       {
@@ -66,7 +72,8 @@
         "category": "Graphics",
         "link": "featured-works/arap/",
         "target": "_self" ,
-        "medium": "C++ • 2025",
+        "medium": "C++",
+        "date": "April 2025",
         "featured": "True"
       },
       {
@@ -76,7 +83,8 @@
         "category": "Graphics",
         "link": "featured-works/fem/",
         "target": "_self",
-        "medium": "C++ • 2025",
+        "medium": "C++",
+        "date": "March 2025",
         "featured": "True"
       },
       {
@@ -86,7 +94,8 @@
         "category": "Interaction Design",
         "link": "./featured-works/warp/",
         "target": "_self",
-        "medium": "Figma • 2025",
+        "medium": "Figma",
+        "date": "May 2025",
         "featured": "True"
       },
       {
@@ -96,7 +105,8 @@
         "category": "Animation",
         "link": "featured-works/room-model/",
         "target": "_self" ,
-        "medium": "Maya • 2025",
+        "medium": "Maya",
+        "date": "May 2025",
         "featured": "True"
       },
       {
@@ -106,7 +116,8 @@
         "category": "Animation",
         "link": "featured-works/gingerbread/",
         "target": "_self" ,
-        "medium": "Adobe Fresco • 2024",
+        "medium": "Adobe Fresco",
+        "date": "December 2024",
         "featured": "False"
       }
       
