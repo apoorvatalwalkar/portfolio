@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="../../styles.css">
+
+<head>
+    <title>Walk Cycle and Environment</title>
+    <link rel="stylesheet" href="https://use.typekit.net/pbk3iay.css">
+</head>
+<div class="topnav">
+    <a href="../../" style="height:110%"> <img src="../../assets/sign.png" height="100%" style="opacity: 100%;" ></a>
+    <div style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        ">
+        <a style="margin-left: 15px;margin-right:15px" href="../../">Home</a>
+        <a style="margin-left: 15px;margin-right:15px" href="../../art.html">Art</a>
+        <a style="margin-left: 15px;margin-right:15px" href="../../assets/Apoorva Talwalkar Resume.pdf" target="_blank">Resume</a>
+        <a style="margin-left: 15px;margin-right:10px" href="../../about.html">About</a>
+
+        </div>
+</div>
+<div class="header">
+    <h1>Walk Cycle and Environment</h1>
+    <h2>A Maya Exploration</h2>
+</div>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="contents">
+
+            <a href="#context">Context</a>
+            <a href="#design-and-model">Design and Model</a>
+            <a href="#rig-and-walk">Rig and Walk Cycle</a>
+            <a href="#environment">Environment</a>
+            <a href="#results">Results</a>
+
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+
+            <div class="flex-container" id="overview">
+
+                <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: stretch; gap:50px">
+                    <div style="display:flex; flex-direction: column;">
+                        <h5>OVERVIEW</h5>
+                        <h3 style="margin-bottom: 10px;">Background</h3>
+
+                            <h4 style="line-height:0;">Class</h4>
+                            <p>
+                                <a href="https://www.aswf.io/summer-learning-program/" target="_blank">Summer Learning Program (SLP)</a> hosted by the <a href="https://www.aswf.io/" target="_blank">Academy Software Foundation (ASFW)</a>
+                            </p>
+
+                            <h4 style="line-height:0;">Timeline</h4>
+                            <p>
+                                Summer 2025 • 4 weeks
+                            </p>
+                    </div>
+
+                    <div style="width:450px; display:flex; flex-direction: column; justify-content: center; text-align: center; gap:10px; align-items: center;">
+                        <img src="assets/slp_final.jpg" style="border-radius: 20px; width: 100%;">
+                        <div style="display: flex; flex-direction: row; align-items: center; gap:10px;">
+                            <a href="#results">Go to Final Video</a>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <hr class="solid">
+            </div>
+
+            <div class="flex-container" id="context">
+                <h5> PREVIOUS WORK</h5>
+                <h3 style="margin-bottom: 15px;">Context</h3>
+                <p style="margin-right: 3rem;">
+                    Previous to this project, I had minimal experience with 3D modeling and animation. I had created my first Maya model, a model of <a href="../room-model/">my room</a>, a couple weeks prior, but had never modeled a person or character. 
+                    I had no experience with creating a rig or animating either. Although this was a quite a large project to take on at the level I was at, I believed the best way to learn was by diving straight in and doing.
+                </p>
+
+                <hr class="solid">
+            </div>
+
+            <div class="flex-container" id="design-and-model">
+                <h5>STEP ONE</h5>
+                <h3>Character Design and Modeling</h3>
+
+                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                    
+                    <div style="display: flex; flex-direction: column;">
+                        <p>
+                            The first step of this project was designing the character. I modeled my base character after myself.
+                            After designing the character, I moved on to modeling it in 3D. I used different techniques including starting from a primitive, quad drawing, and sculpting to create the figure of my character.
+                        </p>
+                        <div style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center;">
+                            <img src="assets/character_design_2.png" width="45%">
+                            <img src="assets/character_design_1.png" width="45%">
+                            <img src="assets/body_1.png" width="18.5%">
+                            <img src="assets/body_2.png" width="18.5%">
+                            <img src="assets/body_3.png" width="19.5%">
+                            <img src="assets/foot.png" width="35%">
+                            <img src="assets/head_1.png" width="36%">
+                            <img src="assets/head_2.png" width="32%">
+                            <img src="assets/with_texture.png" width="27.5%">
+                        </div>
+                    </div>
+                </div>
+                <hr class="solid">
+            </div>
+
+            <div class="flex-container" id="rig-and-walk">
+                <h5>STEP TWO</h5>
+                <h3>Rigging and Walk Cycle</h3>
+
+                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+
+                    <div style="width: 50%">
+                        <p>
+                            Once my character was modeled and textured, I moved onto rigging and animating a walk cycle. I used a basic Human IK rig to set up the skeleton and then used keyframe animation to create a looping walk cycle.
+                            <br>
+                            <br>
+                            I worked with weight painting to create more natural movements, specifically in the clothing and the hair. It took a few iterations to get from a very jittery initial walk to a smoother final walk.
+                        </p>
+                    </div>
+
+                    <video controls style="width: 45%">
+                        <source src="assets/rigging_and_walk_cycle.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <hr class="solid">
+            </div>
+
+            <div class="flex-container" id="environment">
+                <h5>STEP THREE</h5>
+                <h3>Environment</h3>
+
+                <div style="display: flex; flex-direction: column;">
+                        <p>
+                            Lastly, I created the environment for my character to walk in. I chose Wayland Arch, the dorm I lived in sophomore year at Brown University. 
+                            It has a pretty distinctive architecture and provided a good setting for my character to walk in. <br> <br> This gave me more experience in working with skydomes for lighting and adding additional lights to create a more realistic scene. I also experiemented with texture for the first time. This included texturing the building, trees, and my character's face.
+                        </p>
+                        <div style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center;">
+                            <img src="assets/untextured_building.png" width="58%">
+                            <img src="assets/texture_building.png" width="39%">
+                            <img src="assets/tree.png" width="40%">
+                            <img src="assets/slp_final.jpg" width="58%">
+                        </div>
+                    </div>
+                <hr class="solid">
+            </div>
+
+            <div class="flex-container" id="results" style="padding-bottom: 100px;">
+                <h5>FINAL</h5>
+                <h3 style="padding-bottom:10px">Results</h3>
+
+                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                    
+                    <div style="display: flex; flex-direction: column; width: 45%">
+                        <h4>Takeaways</h4>
+                        <p>
+                            This was a really interesting project that really pushed me to learn as much as I could about 3D modeling and animating in a short, four-week timeline. I am proud of the work I was able to put together in this time frame.
+                            It opened my eyes to the possibilities of 3D animation and what can be done to create realistic, high-fidelity animations. If I were to continue on this project, I would work on the textures in the character to make them more lifelike.
+                            I look forward to doing more in Maya in the future.
+                        </p>
+
+                    </div>
+
+                    <video controls style="width:50%">
+                        <source src="assets/final_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/apoorva-talwalkar-b5b3b82a0/" target="_blank">
+            <img src="../../assets/linkedin_logo.png" alt="LinkedIn">
+        </a>
+        <a href="mailto:apoorva_talwalkar@brown.edu" target="_blank">
+            <img src="../../assets/gmail_logo.png" alt="Email">
+        </a>
+        <a href="https://www.instagram.com/artby_apoorva/" target="_blank">
+            <img src="../../assets/intagram_logo.png" alt="Instagram">
+        </a>
+        <a href="https://github.com/apoorvatalwalkar" target="_blank">
+            <img src="../../assets/github_logo.png" alt="Github" width="50%">
+        </a>
+    </div>
+    <div class="credit">
+        <h5>Designed and Coded by Apoorva Talwalkar</h5>
+    </div>
+</footer>
+
+</html>

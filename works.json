@@ -1,30 +1,30 @@
 [
        {
-        "img": "assets/room_model.png",
-        "title": "Room Model",
-        "description": "An exploration into modeling, by modeling my childhood bedroom",
+        "img": "assets/slp_final.jpg",
+        "title": "Walk Cycle and Environment",
+        "description": "Modeling, rigging and animating a basic sequence in Maya",
         "category": "Animation",
-        "link": "featured-works/room-model/",
+        "link": "featured-works/walk-cycle/",
         "target": "_self" ,
         "medium": "Maya • 2025"
       },
       {
-        "img": "assets/warp_gif.gif",
-        "title": "Warp AI",
-        "description": "Designing a multi-screen prototype for a startup",
-        "category": "Interaction Design",
-        "link": "./featured-works/warp/",
-        "target": "_self",
-        "medium": "Figma • 2025"
+        "img": "assets/flower.gif",
+        "title": "Color Me Noisy",
+        "description": "Making computer generated animations look hand-drawn",
+        "category": "Animation",
+        "link": "featured-works/color-me-noisy/",
+        "target": "_self" ,
+        "medium": "C++ • 2025"
       },
       {
-        "img": "assets/t_cup_img.png",
-        "title": "Toronto Cupcakes",
-        "description": "Redesigning an existing webpage with responsive components",
-        "category": "Interaction Design",
-        "link": "featured-works/responsive-redesign/",
+        "img": "assets/bean_complex.png",
+        "title": "Bean",
+        "description": "Building and raytracing a scene of the Chicago Bean",
+        "category": "Graphics",
+        "link": "./featured-works/bean/",
         "target": "_self",
-        "medium": "Case Study • HTML • 2025"
+        "medium": "C++ • 2024"
       },
       {
         "img": "assets/spotify.gif",
@@ -36,13 +36,13 @@
         "medium": "Case Study • Figma • 2025"
       },
       {
-        "img": "assets/bean_complex.png",
-        "title": "Bean",
-        "description": "Building and raytracing a scene of the Chicago Bean",
-        "category": "Graphics",
-        "link": "./featured-works/bean/",
+        "img": "assets/t_cup_img.png",
+        "title": "Toronto Cupcakes",
+        "description": "Redesigning an existing webpage with responsive components",
+        "category": "Interaction Design",
+        "link": "featured-works/responsive-redesign/",
         "target": "_self",
-        "medium": "C++ • 2024"
+        "medium": "Case Study • HTML • 2025"
       },
       {
         "img": "assets/arap.gif",
@@ -63,22 +63,22 @@
         "medium": "C++ • 2025"
       },
       {
-        "img": "assets/flower.gif",
-        "title": "Color Me Noisy",
-        "description": "Making computer generated animations look hand-drawn",
-        "category": "Animation",
-        "link": "featured-works/color-me-noisy/",
-        "target": "_self" ,
-        "medium": "C++ • 2025"
+        "img": "assets/warp_gif.gif",
+        "title": "Warp AI",
+        "description": "Designing a multi-screen prototype for a startup",
+        "category": "Interaction Design",
+        "link": "./featured-works/warp/",
+        "target": "_self",
+        "medium": "Figma • 2025"
       },
       {
-        "img": "assets/gingerbread.png",
-        "title": "Gingerbread Workshop",
-        "description": "A festive Christmas-time hand drawn animation",
+        "img": "assets/room_model.png",
+        "title": "Room Model",
+        "description": "An exploration into modeling, by modeling my childhood bedroom",
         "category": "Animation",
-        "link": "featured-works/gingerbread/",
+        "link": "featured-works/room-model/",
         "target": "_self" ,
-        "medium": "Adobe Fresco • 2024"
+        "medium": "Maya • 2025"
       }
       
 ]
