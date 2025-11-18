@@ -14,7 +14,7 @@
         "img": "assets/flower.gif",
         "title": "Color Me Noisy",
         "description": "Making computer generated animations look hand-drawn",
-        "category": "Animation",
+        "category": "Graphics",
         "link": "featured-works/color-me-noisy/",
         "target": "_self" ,
         "medium": "C++",
@@ -22,14 +22,14 @@
         "featured": "True"
       },
       {
-        "img": "assets/t_cup_img.png",
-        "title": "Toronto Cupcakes",
-        "description": "Redesigning an existing webpage with responsive components",
-        "category": "Interaction Design",
-        "link": "featured-works/responsive-redesign/",
-        "target": "_self",
-        "medium": "HTML",
-        "date": "April 2025",
+        "img": "assets/room_lighting.jpg",
+        "title": "Lighting a Room",
+        "description": "Adding shaders and lights to a scene to create a mood",
+        "category": "Animation",
+        "link": "featured-works/room-lighting/",
+        "target": "_self" ,
+        "medium": "Maya",
+        "date": "October 2025",
         "featured": "True"
       },
       {
@@ -55,14 +55,14 @@
         "featured": "True"
       },
       {
-        "img": "assets/pathtracer.png",
-        "title": "Path Tracer",
-        "description": "Implementing a physically-based renderer based on the path tracing algorithm",
-        "category": "Graphics",
-        "link": "./featured-works/pathtracer/",
+        "img": "assets/fujifilm.jpg",
+        "title": "Fujifilm Camera Model",
+        "description": "Modeling and shading a fujifilm model from scratch",
+        "category":"Animation",
+        "link": "featured-works/fujifilm-model/",
         "target": "_self",
-        "medium": "C++ ",
-        "date": "February 2025",
+        "medium": "Maya",
+        "date": "October 2025",
         "featured": "True"
       },
       {
@@ -77,14 +77,14 @@
         "featured": "True"
       },
       {
-        "img": "assets/fem.png",
-        "title": "FEM",
-        "description": "Simulating gravity and collisons using the Finite Element Method",
+        "img": "assets/pathtracer.png",
+        "title": "Path Tracer",
+        "description": "Implementing a physically-based renderer based on the path tracing algorithm",
         "category": "Graphics",
-        "link": "featured-works/fem/",
+        "link": "./featured-works/pathtracer/",
         "target": "_self",
-        "medium": "C++",
-        "date": "March 2025",
+        "medium": "C++ ",
+        "date": "February 2025",
         "featured": "True"
       },
       {
@@ -107,6 +107,17 @@
         "target": "_self" ,
         "medium": "Maya",
         "date": "May 2025",
+        "featured": "False"
+      },
+      {
+        "img": "assets/t_cup_img.png",
+        "title": "Toronto Cupcakes",
+        "description": "Redesigning an existing webpage with responsive components",
+        "category": "Interaction Design",
+        "link": "featured-works/responsive-redesign/",
+        "target": "_self",
+        "medium": "HTML",
+        "date": "April 2025",
         "featured": "True"
       },
       {
@@ -118,6 +129,17 @@
         "target": "_self" ,
         "medium": "Adobe Fresco",
         "date": "December 2024",
+        "featured": "False"
+      },
+      {
+        "img": "assets/fem.png",
+        "title": "FEM",
+        "description": "Simulating gravity and collisons using the Finite Element Method",
+        "category": "Graphics",
+        "link": "featured-works/fem/",
+        "target": "_self",
+        "medium": "C++",
+        "date": "March 2025",
         "featured": "False"
       }
       

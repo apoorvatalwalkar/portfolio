@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="../../styles.css">
+
+<head>
+    <title>FujiFilm Camera</title>
+    <link rel="stylesheet" href="https://use.typekit.net/pbk3iay.css">
+</head>
+<div class="topnav">
+    <a href="../../" style="height:110%"> <img src="../../assets/sign.png" height="100%" style="opacity: 100%;"></a>
+    <div style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        ">
+        <a style="margin-left: 15px;margin-right:15px" href="../../">Home</a>
+        <a style="margin-left: 15px;margin-right:15px" href="../../archive.html">Archive</a>
+        <a style="margin-left: 15px;margin-right:15px" href="../../art.html">Art</a>
+        <a style="margin-left: 15px;margin-right:15px" href="../../assets/Apoorva Talwalkar Resume.pdf" target="_blank">Resume</a>
+        <a style="margin-left: 15px;margin-right:10px" href="../../about.html">About</a>
+
+    </div>
+</div>
+<div class="header">
+    <h1>Fujifilm Camera</h1>
+    <h2>Modeling and Shading in Maya</h2>
+</div>
+
+<body>
+
+    <div class="wrapper">
+        <div class="contents">
+
+            <a href="#context">Context</a>
+            <a href="#reference">Reference Photos</a>
+            <a href="#modeling">Modeling</a>
+            <a href="#shading">Shading</a>
+            <a href="#results">Results</a>
+
+
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+
+            <div class="flex-container" id="overview">
+
+                <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: stretch; gap:50px">
+                    <div style="display:flex; flex-direction: column;">
+                        <h5>OVERVIEW</h5>
+                        <h3 style="margin-bottom: 10px;">Background</h3>
+
+                            <h4 style="line-height:0;">Class</h4>
+                            <p>
+                                CSCI1250 Computer Animation
+                            </p>
+
+                            <h4 style="line-height:0;">Timeline</h4>
+                            <p>
+                                Fall 2025 • 4 weeks
+                            </p>
+                    </div>
+
+                    <div style="width:450px; display:flex; flex-direction: column; justify-content: center; text-align: center; gap:10px; align-items: center;">
+                        <img src="assets/fujifilm.jpg" style="border-radius: 20px; width: 75%;">
+                        <div style="display: flex; flex-direction: row; align-items: center; gap:10px;">
+                            <a href="#results">Go to Video</a>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <hr class="solid">
+            </div>
+
+            <div class="flex-container" id="context">
+                <h5>BACKGROUND</h5>
+                <h3 style="margin-bottom: 15px;">Context</h3>
+                <p style="margin-right: 3rem;">
+                    For this project, I was tasked to model and shade an item that I owned. I decided to model my own Fujifilm Polaroid camera. 
+                    It had some interesting geometry: overall it was really smooth, but also had a lot of buttons and other protrusions.
+                    For the shading part, it had a decent amount of wear and tear.
+                </p>
+
+
+                <hr class="solid">
+            </div>
+
+            <div class="flex-container" id="reference">
+                <h5>GETTING STARTED</h5>
+                <h3>Taking Reference Photos</h3>
+                <p>
+                    Since I owned the item, it was easy for me to set up my camera and take reference photos. To get a more orthographic look, I positioned myself further away from the object and zoomed in.
+                </p>
+                <div style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center;">
+                            <img src="assets/reference-photos/front.JPG" width="32%">
+                            <img src="assets/reference-photos/left.JPG" width="32%">
+                            <img src="assets/reference-photos/right.JPG" width="32%">
+                            <img src="assets/reference-photos/back.JPG" width="32%">
+                            <img src="assets/reference-photos/top.JPG" width="32%">
+                            <img src="assets/reference-photos/bottom.JPG" width="32%">
+                        </div>
+                <hr class="solid">
+            </div>
+
+            <div class="flex-container" id="modeling">
+                <h5>STEP #1</h5>
+                <h3 style="padding-bottom:10px">Modeling</h3>
+                <p> 
+                    After taking reference photos, I built my model. I started with a basic cube primitive. Then I continuously added edge loops and extruded faces until my model resembled the reference. 
+                    Once I was happy with the model, I edited the UV maps, to be most useful when it came to shading.
+                </p>
+                <div style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center; margin-top:30px">
+                            <img src="assets/model/front.png" width="32%">
+                            <img src="assets/model/back.png" width="32%">
+                            <img src="assets/model/top.png" width="32%">
+                        </div>
+                <hr class="solid">
+            </div>
+
+            <div class="flex-container" id="modeling">
+                <h5>STEP #2</h5>
+                <h3 style="padding-bottom:10px">Shading</h3>
+                <p> 
+                    Next, I created a UV map to map the stickers and wear and tear onto the camera.
+                </p>
+                <div style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center; margin-top:30px">
+                            <img src="assets/shading/back.jpg" width="49%">
+                            <img src="assets/shading/diagonal.jpg" width="49%">
+                        </div>
+                <hr class="solid">
+            </div>
+
+            <div class="flex-container" id="results" style="padding-bottom: 100px;">
+                <h5>FINAL</h5>
+                <h3 style="padding-bottom:10px">Results</h3>
+                
+
+                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                    
+                    <div style="display: flex; flex-direction: column; width: 45%">
+                        <p>
+                            The result is a fully shaded model of a fujifilm camera spinning on this 360º turntable
+                        </p>
+                        <h4>Takeaways</h4>
+                        <p>
+                            This was the first time I really spent weeks modeling and shading a single piece. 
+                            I learned a lot through the experience, from taking reference photos to new ways of modeling and layering shading. 
+                            This was a very fruitful project, and I can't wait to do more.
+                            
+                        </p>
+
+                    </div>
+
+                    <img src="assets/final_gif.gif" width="50%">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/apoorva-talwalkar-b5b3b82a0/" target="_blank">
+            <img src="../../assets/linkedin_logo.png" alt="LinkedIn">
+        </a>
+        <a href="mailto:apoorva_talwalkar@brown.edu" target="_blank">
+            <img src="../../assets/gmail_logo.png" alt="Email">
+        </a>
+        <a href="https://www.instagram.com/artby_apoorva/" target="_blank">
+            <img src="../../assets/intagram_logo.png" alt="Instagram">
+        </a>
+        <a href="https://github.com/apoorvatalwalkar" target="_blank">
+            <img src="../../assets/github_logo.png" alt="Github" width="50%">
+        </a>
+    </div>
+    <div class="credit">
+        <h5>Designed and Coded by Apoorva Talwalkar</h5>
+    </div>
+</footer>
+
+</html>
