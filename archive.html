@@ -20,25 +20,24 @@
         </div>
     </div>
     <body>
-        <div style="padding: 110px 75px 50px 75px;">
+        <div >
             <div style="text-align: center; margin-bottom: 40px;">
-                <h2>Archive</h2>
             </div>
 
-            <div style="display: flex; flex-direction: row; justify-content: center; padding-bottom: 30px;">
-                <button id="button-all" class="button-box button-select" style="--btn-color: var(--blue)">
+            <div class="button-filter-container archive-buttons">
+                <button id="button-all" class="button-box button-select" style="--btn-color: black">
                     All
                 </button>
-                <button id="button-graphics" class="button-box" style="--btn-color: var(--pink)">
+                <button id="button-graphics" class="button-box" style="--btn-color: black">
                     Graphics
                 </button>
-                <button id="button-animation" class="button-box" style="--btn-color: var(--purple)">
+                <button id="button-animation" class="button-box" style="--btn-color: black">
                     Animation/Modeling
                 </button>
-                <button id="button-uiux" class="button-box" style="--btn-color: var(--dark-blue)">
+                <button id="button-uiux" class="button-box" style="--btn-color: black">
                     Interaction Design
                 </button>
-                <button id="button-misc" class="button-box" style="--btn-color: #8B8B8B">
+                <button id="button-misc" class="button-box" style="--btn-color: black">
                     Miscellaneous
                 </button>
             </div>
@@ -107,15 +106,14 @@
                 }
 
                 years.forEach(year => {
-                    // Add year header directly to archive element
+                    // Add year header
                     const yearHeader = document.createElement('h3');
                     yearHeader.textContent = year;
-                    yearHeader.style.cssText = 'border-bottom: 1px solid; padding-bottom:10px; margin: 50px 150px 30px 150px; text-align: left;';
+                    yearHeader.style.cssText = 'margin: 40px 75px 20px 75px; border-bottom: 1px solid black; padding-bottom: 10px; text-align: left; font-size: 24px;';
                     archiveEl.appendChild(yearHeader);
 
                     const cardsContainer = document.createElement('div');
-                    cardsContainer.className = 'featured-work';
-                    cardsContainer.style.marginBottom = '0';
+                    cardsContainer.className = 'archive-grid';
 
                     // Sort works within the year by date (latest first)
                     const sortedWorks = groupedWorks[year].sort((a, b) => {
@@ -126,12 +124,16 @@
 
                     sortedWorks.forEach(work => {
                         const cardHTML = `
-                            <div class="flex-card">
+                            <div class="archive-card">
                                 <a href="${work.link}" target="${work.target}">
-                                    <img src="${work.img}" width="100%" style="border-radius: 10px;">
-                                    <h4>${work.title}</h4>
-                                    <h5>${work.description}</h5>
-                                    <h5 style="font-weight: 400">${work.medium} • ${work.date}</h5>
+                                    <div class="archive-card-image">
+                                        <img src="${work.img}" alt="${work.title}">
+                                    </div>
+                                    <div class="archive-card-info">
+                                        <h4>${work.title}</h4>
+                                        <h5>${work.description}</h5>
+                                        <h5 style="font-weight: 400">${work.medium} • ${work.date}</h5>
+                                    </div>
                                 </a>
                             </div>
                         `;
