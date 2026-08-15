@@ -1,203 +1,221 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="../../styles.css">
-
+<html lang="en">
 <head>
-    <title>Pathtracer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Tracer</title>
     <link rel="stylesheet" href="https://use.typekit.net/pbk3iay.css">
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        /* Results renders are square source images — show them whole
+           instead of the shared grid's default 4:3 crop. */
+        #results .cs-img-grid-3 img {
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background: var(--white);
+        }
+    </style>
 </head>
-<div class="topnav">
-    <a href="../../" style="height:110%"> <img src="../../assets/sign.png" height="100%" style="opacity: 100%;"></a>
-    <div style="
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        ">
-        <a style="margin-left: 15px;margin-right:15px" href="../../">Home</a>
-        <a style="margin-left: 15px;margin-right:15px" href="../../archive.html">Archive</a>
-        <a style="margin-left: 15px;margin-right:15px" href="../../art.html">Art</a>
-        <a style="margin-left: 15px;margin-right:15px" href="../../assets/Apoorva Talwalkar Resume.pdf" target="_blank">Resume</a>
-        <a style="margin-left: 15px;margin-right:10px" href="../../about.html">About</a>
 
+<!-- ─── NAV ───────────────────────────────────────────── -->
+<div class="topnav">
+    <a href="../../" style="height:110%">
+        <img src="../../assets/sign.png" height="100%" alt="home">
+    </a>
+    <div style="display:flex; flex-direction:row; justify-content:space-evenly;">
+        <a style="margin-left:15px; margin-right:15px" href="../../">Home</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../archive.html">Archive</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../art.html">Art</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../assets/Apoorva Talwalkar Resume.pdf" target="_blank">Resume</a>
+        <a style="margin-left:15px; margin-right:10px"  href="../../about.html">About</a>
     </div>
 </div>
-<div class="header">
-    <h1>Pathtracer</h1>
-    <h2>A Physically-Based Renderer</h2>
-</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     ① HEADER
+════════════════════════════════════════════════════════ -->
+<header class="cs-header">
+
+    <div class="cs-header-img-wrap">
+        <img src="assets/hero.png" alt="Path tracer rendered scene">
+    </div>
+
+    <h1>Path Tracer</h1>
+    <p class="cs-subtitle">A Physically-Based Renderer</p>
+
+    <div class="cs-meta-row">
+        <div>
+            <span class="cs-meta-key">Class</span>
+            <span class="cs-meta-val">CSCI2240 Advanced Computer Graphics</span>
+        </div>
+        <div>
+            <span class="cs-meta-key">Language</span>
+            <span class="cs-meta-val">C++</span>
+        </div>
+        <div>
+            <span class="cs-meta-key">Timeline</span>
+            <span class="cs-meta-val">2 weeks · Spring 2025</span>
+        </div>
+    </div>
+
+    <div class="cs-header-ctas">
+        <a class="cs-btn cs-btn-blue" href="#results">View Results</a>
+    </div>
+
+</header>
 
 <body>
 
-    <div class="wrapper">
-        <div class="contents">
+<!-- ═══════════════════════════════════════════════════════
+     ② CONTEXT
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-white" id="context">
+    <span class="section-label">Background</span>
+    <h3>Context</h3>
+    <p>In CSCI1230 Computer Graphics, I had previously implemented a basic raytracer. This shot one ray per pixel at a given scene and could handle direct lighting and reflections, for the most part. For this assignment, I implemented a physically-based renderer based on the path tracing algorithm, building on the basic raytracer to handle more complex scenes, with support for indirect lighting to create even more realistic scenes.</p>
+</section>
 
-            <a href="#context">Context</a>
-            <a href="#understanding">Understanding Path Tracing</a>
-            <a href="#features">Features</a>
-            <a href="#results">Results</a>
+
+<!-- ═══════════════════════════════════════════════════════
+     ③ UNDERSTANDING PATH TRACING
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-tinted" id="understanding">
+    <span class="section-label">Getting Started</span>
+    <h3>Understanding Path Tracing</h3>
+    <p>Path tracing is a simple, elegant Monte Carlo sampling approach to solving the rendering equation. Like ray tracing, it produces images by firing rays from the eye or camera into the scene. Unlike basic ray tracing, it generates recursive bounce rays in a physically accurate manner, making it an unbiased estimator for the rendering equation. Path tracers support a wide variety of interesting visual effects, like soft shadows, color bleeding, and caustics, though they may take a long time to converge to a noise-free image.</p>
+</section>
 
 
+<!-- ═══════════════════════════════════════════════════════
+     ④ BRDFS
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-white" id="brdfs">
+    <div class="cs-img-section-header">
+        <span class="section-label">What I Did</span>
+        <h3>Bidirectional Reflectance Distribution Functions</h3>
+        <p style="font-family:'inter',sans-serif; font-weight:300; font-size:17px; color:rgba(0,0,0,0.75); max-width:760px; margin-top:16px;">
+            First, I implemented a variety of BRDFs to <strong>model how light interacts with different surfaces</strong>. A BRDF is a function that defines how light is reflected or absorbed by a surface based on the angle of the light, the surface, and the ray. For the assignment, I implemented four BRDFs: diffuse surfaces, glossy reflections, mirror reflections, and refractions.
+        </p>
+    </div>
+
+    <div class="cs-img-grid-compact">
+        <div>
+            <img src="assets/diffuse.png" alt="Diffuse surface rendering">
+            <p class="cs-caption">Diffuse surfaces</p>
         </div>
-
-        <div style="display: flex; flex-direction: column;">
-
-            <div class="flex-container" id="overview">
-
-                <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: stretch; gap:50px">
-                    <div style="display:flex; flex-direction: column;">
-                        <h5>OVERVIEW</h5>
-                        <h3 style="margin-bottom: 10px;">Background</h3>
-
-                            <h4 style="line-height:0;">Class</h4>
-                            <p>
-                                CSCI2240 Advanced Computer Graphics
-                            </p>
-
-                            <h4 style="line-height:0;">Timeline</h4>
-                            <p>
-                                Spring 2024 • 2 weeks
-                            </p>
-                    </div>
-
-                    <div style="width:450px; display:flex; flex-direction: column; justify-content: center; text-align: center; gap:10px; align-items: center;">
-                        <img src="assets/cornell_box_direct_lighting_only_stratified.png" style="border-radius: 20px; width: 60%;">
-                        <div style="display: flex; flex-direction: row; align-items: center; gap:10px;">
-                            <a href="#results">Go to Results</a>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <hr class="solid">
-            </div>
-
-            <div class="flex-container" id="context">
-                <h5>BACKGROUND</h5>
-                <h3 style="margin-bottom: 15px;">Context</h3>
-                <p style="margin-right: 3rem;">
-                    In CSCI1230 Computer Graphics, I had previously implemented a basic raytracer. This shot one ray per pixel at a given scene and could handle direct lighting and reflections (mostly). 
-                    For this assignment, I implemented a physically-based renderer based on the path tracing algorithm. I built upon the basic raytracer to handle more complex scenes, with support for different and indirect lighting to create even more realistic scenes.
-                    
-                </p>
-
-
-                <hr class="solid">
-            </div>
-
-            <div class="flex-container" id="understanding">
-                <h5>GETTING STARTED</h5>
-                <h3>Understanding Path Tracing</h3>
-                <p>
-                    Path tracing is a simple, elegant Monte Carlo sampling approach to solving the rendering equation.
-                    Like ray tracing, it produces images by firing rays from the eye/camera into the scene. Unlike basic
-                    ray tracing, it generates recursive bounce rays in a physically accurate manner, making it an
-                    unbiased estimator for the rendering equation. Path tracers support a wide variety of interesting
-                    visual effects (soft shadows, color bleeding, caustics, etc.), though they may take a long time to
-                    converge to a noise-free image.
-                </p>
-                <hr class="solid">
-            </div>
-
-            <div class="flex-container" id="features">
-                <h5>WHAT I DID</h5>
-                <h3 style="padding-bottom:10px">Features</h3>
-
-                <h4>Bidirectional Reflectance Distribution Function (BRDFs)</h4>
-                <p> 
-                    Firstly, I implemented a variety of BRDFs to <b>model how light interacts with different surfaces</b>. 
-                    A BRDF is a function that defines how light is reflected or absorbed by a surface based on the angle of the light, the surface, and the ray. 
-                    For the assignment I implemeted 4 BRDFs: diffuse surfaces, glossy reflections, mirror reflections, and refractions.
-                </p>
-                <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                    <div style="display: flex; flex-direction: column; align-items: center; width:24%">
-                        <img src="assets/diffuse.png" width="100%">
-                        <h5>Diffuse Surfaces</h5>
-                    </div>
-                    <div style="display: flex; flex-direction: column; align-items: center;width:24%">
-                        <img src="assets/glossy.png" width="100%">
-                        <h5>Glossy Reflections</h5>
-                    </div>
-                    <div style="display: flex; flex-direction: column; align-items: center;width:24%">
-                        <img src="assets/diffuse.png" width="100%">
-                        <h5>Mirror Reflection</h5>
-                    </div>
-                    <div style="display: flex; flex-direction: column; align-items: center;width:24%">
-                        <img src="assets/refraction.png" width="100%">
-                        <h5>Refraction</h5>
-                    </div>
-                </div>
-
-                <h4 style="padding-top:30px">Indirect Illumination</h4>
-                <p>
-                    For the assignment, by tracing bouncing rays and using the <b>Russion Roulette technique for ray termination</b>, I was able to implement an efficient algorithm to mimic indirect illumination. 
-                    This can be seen in the floor of the above images where the red from the box or the colors from the glass orbs bleeds slightly onto the floor due to the light that bounces off of those objects and onto the floor.
-                </p>
-
-                <h4 style="padding-top:30px">Stratified Sampling and Low Discrepancy Sampling</h4>
-                <p>
-                    Lastly, I implemented stratifed sampling and low discrepancy, which are both methods that help reduce noise in the final rendered image by <b>shooting mutiple rays per pixel</b>. This results in cleaner images with more definition. 
-                    In the following images you can see the difference that these methods make in the final output.
-                </p>
-                <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                    <div style="display: flex; flex-direction: column; align-items: center; width:32%">
-                        <img src="assets/medievalboat_random.png" width="100%">
-                        <h5>Random Sampling</h5>
-                    </div>
-                    <div style="display: flex; flex-direction: column; align-items: center;width:32%">
-                        <img src="assets/medieval_stratified.png" width="100%">
-                        <h5>Stratified Sampling</h5>
-                    </div>
-                    <div style="display: flex; flex-direction: column; align-items: center;width:32%">
-                        <img src="assets/medieval_low_discrepancy.png" width="100%">
-                        <h5>Low Discrepancy Sampling</h5>
-                    </div>
-
-                </div>
-
-                <hr class="solid">
-            </div>
-
-            <div class="flex-container" id="results" style="padding-bottom: 100px;">
-                <h5>FINAL</h5>
-                <h3 style="padding-bottom:10px">Results</h3>
-                <p>The Result was a fully functional pathtracer with really cool features. Here are some of the renders I was able to create!</p>
-
-                <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top:20px; flex-wrap: wrap; gap:20px">
-                    <div
-                        style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
-                        <img src="assets/cornell_box_full_lighting.png" width="100%" style="border-radius: 10px;">
-                    </div>
-                    <div
-                        style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
-                        <img src="assets/glossy.png" width="100%" style="border-radius: 10px;">
-                    </div>
-
-                    <div
-                        style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
-                        <img src="assets/refraction.png" width="100%" style="border-radius: 10px;">
-                    </div>
-
-                    <div
-                        style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
-                        <img src="assets/mirror.png" width="100%" style="border-radius: 10px;">
-                    </div>
-
-                    <div
-                        style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
-                        <img src="assets/cornell_box_direct_lighting_only_stratified.png" width="100%" style="border-radius: 10px;">
-                    </div>
-
-                    <div
-                        style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
-                        <img src="assets/cornell_box_full_lighting_low_probability.png" width="100%" style="border-radius: 10px;">
-                    </div>
-
-                </div>
-            </div>
+        <div>
+            <img src="assets/glossy.png" alt="Glossy reflection rendering">
+            <p class="cs-caption">Glossy reflections</p>
+        </div>
+        <div>
+            <img src="assets/mirror.png" alt="Mirror reflection rendering">
+            <p class="cs-caption">Mirror reflection</p>
+        </div>
+        <div>
+            <img src="assets/refraction.png" alt="Refraction rendering">
+            <p class="cs-caption">Refraction</p>
         </div>
     </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑤ INDIRECT ILLUMINATION
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-tinted" id="indirect-illumination">
+    <div class="cs-img-section-header">
+        <span class="section-label">What I Did</span>
+        <h3>Indirect Illumination</h3>
+        <p style="font-family:'inter',sans-serif; font-weight:300; font-size:17px; color:rgba(0,0,0,0.75); max-width:760px; margin-top:16px;">
+            By tracing bouncing rays and using the <strong>Russian Roulette technique for ray termination</strong>, I was able to implement an efficient algorithm to mimic indirect illumination. This can be seen in the floor of the image below, where the red from the box and the colors from the glass orbs bleed slightly onto the floor from light bouncing off those objects.
+        </p>
+    </div>
+
+    <div class="cs-img-grid-2">
+        <div>
+            <img src="assets/cornell_box_direct_lighting_only.png" alt="Cornell box rendered with direct lighting only">
+            <p class="cs-caption">Direct lighting only</p>
+        </div>
+        <div>
+            <img src="assets/cornell_box_full_lighting.png" alt="Cornell box rendered with full lighting, showing color bleed">
+            <p class="cs-caption">Full lighting, with color bleed</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑥ SAMPLING METHODS
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-white" id="sampling">
+    <div class="cs-img-section-header">
+        <span class="section-label">What I Did</span>
+        <h3>Stratified &amp; Low Discrepancy Sampling</h3>
+        <p style="font-family:'inter',sans-serif; font-weight:300; font-size:17px; color:rgba(0,0,0,0.75); max-width:760px; margin-top:16px;">
+            Lastly, I implemented stratified sampling and low discrepancy sampling, both methods that help reduce noise in the final rendered image by <strong>shooting multiple rays per pixel</strong>. This results in cleaner images with more definition, as shown below.
+        </p>
+    </div>
+
+    <div class="cs-img-grid-3">
+        <div>
+            <img src="assets/medievalboat_random.png" alt="Rendering with random sampling, showing noise">
+            <p class="cs-caption">Random sampling</p>
+        </div>
+        <div>
+            <img src="assets/medieval_stratified.png" alt="Rendering with stratified sampling, less noise">
+            <p class="cs-caption">Stratified sampling</p>
+        </div>
+        <div>
+            <img src="assets/medieval_low_discrepancy.png" alt="Rendering with low discrepancy sampling, least noise">
+            <p class="cs-caption">Low discrepancy sampling</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑦ RESULTS
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-tinted" id="results">
+    <div class="cs-img-section-header">
+        <span class="section-label">Final</span>
+        <h3>Results</h3>
+        <p style="font-family:'inter',sans-serif; font-weight:300; font-size:17px; color:rgba(0,0,0,0.75); max-width:760px; margin-top:16px;">
+            The result was a fully functional path tracer with some really cool features. Here are some of the renders I was able to create.
+        </p>
+    </div>
+
+    <div class="cs-img-grid-3">
+        <div>
+            <img src="assets/cornell_box_full_lighting.png" alt="Cornell box with full lighting">
+            <p class="cs-caption">Full lighting</p>
+        </div>
+        <div>
+            <img src="assets/glossy.png" alt="Glossy reflection render">
+            <p class="cs-caption">Glossy reflection</p>
+        </div>
+        <div>
+            <img src="assets/refraction.png" alt="Refraction render">
+            <p class="cs-caption">Refraction</p>
+        </div>
+        <div>
+            <img src="assets/mirror.png" alt="Mirror reflection render">
+            <p class="cs-caption">Mirror reflection</p>
+        </div>
+        <div>
+            <img src="assets/cornell_box_direct_lighting_only_stratified.png" alt="Cornell box with stratified direct lighting">
+            <p class="cs-caption">Stratified direct lighting</p>
+        </div>
+        <div>
+            <img src="assets/cornell_box_full_lighting_low_probability.png" alt="Cornell box with full lighting, low termination probability">
+            <p class="cs-caption">Full lighting, low probability</p>
+        </div>
+    </div>
+</section>
+
 </body>
 
+<!-- ─── FOOTER ─────────────────────────────────────────── -->
 <footer>
     <div class="social-links">
         <a href="https://www.linkedin.com/in/apoorva-talwalkar-b5b3b82a0/" target="_blank">

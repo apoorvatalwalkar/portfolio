@@ -1,181 +1,216 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="../../styles.css">
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walk Cycle and Environment</title>
     <link rel="stylesheet" href="https://use.typekit.net/pbk3iay.css">
+    <link rel="stylesheet" href="../../styles.css">
 </head>
-<div class="topnav">
-    <a href="../../" style="height:110%"> <img src="../../assets/sign.png" height="100%" style="opacity: 100%;" ></a>
-    <div style="
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        ">
-        <a style="margin-left: 15px;margin-right:15px" href="../../">Home</a>
-        <a style="margin-left: 15px;margin-right:15px" href="../../archive.html">Archive</a>
-        <a style="margin-left: 15px;margin-right:15px" href="../../art.html">Art</a>
-        <a style="margin-left: 15px;margin-right:15px" href="../../assets/Apoorva Talwalkar Resume.pdf" target="_blank">Resume</a>
-        <a style="margin-left: 15px;margin-right:10px" href="../../about.html">About</a>
 
-        </div>
+<!-- ─── NAV ───────────────────────────────────────────── -->
+<div class="topnav">
+    <a href="../../" style="height:110%">
+        <img src="../../assets/sign.png" height="100%" alt="home">
+    </a>
+    <div style="display:flex; flex-direction:row; justify-content:space-evenly;">
+        <a style="margin-left:15px; margin-right:15px" href="../../">Home</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../archive.html">Archive</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../art.html">Art</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../assets/Apoorva Talwalkar Resume.pdf" target="_blank">Resume</a>
+        <a style="margin-left:15px; margin-right:10px"  href="../../about.html">About</a>
+    </div>
 </div>
-<div class="header">
+
+<!-- ═══════════════════════════════════════════════════════
+     ① HEADER
+════════════════════════════════════════════════════════ -->
+<header class="cs-header">
+
+    <div class="cs-header-img-wrap">
+        <img src="assets/slp_final.jpg" alt="Final rendered scene of a character walking through the Wayland Arch environment">
+    </div>
+
     <h1>Walk Cycle and Environment</h1>
-    <h2>A Maya Exploration</h2>
-</div>
+    <p class="cs-subtitle">A Maya Exploration</p>
+
+    <div class="cs-meta-row">
+        <div>
+            <span class="cs-meta-key">Project Scope</span>
+            <span class="cs-meta-val">Character Modeling, Rigging &amp; Animation</span>
+        </div>
+        <div>
+            <span class="cs-meta-key">Software</span>
+            <span class="cs-meta-val">Autodesk Maya</span>
+        </div>
+        <div>
+            <span class="cs-meta-key">Program</span>
+            <span class="cs-meta-val">Summer Learning Program, Academy Software Foundation</span>
+        </div>
+        <div>
+            <span class="cs-meta-key">Timeline</span>
+            <span class="cs-meta-val">4 weeks · Summer 2025</span>
+        </div>
+    </div>
+
+    <div class="cs-header-ctas">
+        <a class="cs-btn cs-btn-blue" href="#results">View Results</a>
+        <a class="cs-btn" href="https://www.aswf.io/summer-learning-program/" target="_blank">About the Program</a>
+    </div>
+
+</header>
 
 <body>
 
-    <div class="wrapper">
+<!-- ═══════════════════════════════════════════════════════
+     ② CONTEXT
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-white" id="context">
+    <span class="section-label">Previous Work</span>
+    <h3>Context</h3>
+    <p>Before this project, I had minimal experience with 3D modeling and animation. I'd made my first Maya model, <a href="../room-model/">a model of my room</a>, a couple weeks prior, but had never modeled a character, built a rig, or animated anything. Although this was a large project to take on at the level I was at, I believed the best way to learn was to dive straight in and do it.</p>
+</section>
 
-        <div class="contents">
 
-            <a href="#context">Context</a>
-            <a href="#design-and-model">Design and Model</a>
-            <a href="#rig-and-walk">Rig and Walk Cycle</a>
-            <a href="#environment">Environment</a>
-            <a href="#results">Results</a>
+<!-- ═══════════════════════════════════════════════════════
+     ③ CHARACTER DESIGN AND MODELING
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-tinted" id="design-and-model">
+    <div class="cs-img-section-header">
+        <span class="section-label">Step One</span>
+        <h3>Character Design and Modeling</h3>
+        <p style="font-family:'inter',sans-serif; font-weight:300; font-size:17px; color:rgba(0,0,0,0.75); max-width:760px; margin-top:16px;">
+            The first step was designing the character. I modeled my base character after myself, then moved on to modeling in 3D, using a mix of techniques including starting from a primitive, quad drawing, and sculpting to build up the figure.
+        </p>
+    </div>
 
+    <div class="cs-img-grid-3" style="margin-bottom:14px;">
+        <div>
+            <img src="assets/character_design_2.png" alt="Character design concept, front view">
+            <p class="cs-caption">Character design concept</p>
         </div>
-
-        <div style="display: flex; flex-direction: column;">
-
-            <div class="flex-container" id="overview">
-
-                <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: stretch; gap:50px">
-                    <div style="display:flex; flex-direction: column;">
-                        <h5>OVERVIEW</h5>
-                        <h3 style="margin-bottom: 10px;">Background</h3>
-
-                            <h4 style="line-height:0;">Class</h4>
-                            <p>
-                                <a href="https://www.aswf.io/summer-learning-program/" target="_blank">Summer Learning Program (SLP)</a> hosted by the <a href="https://www.aswf.io/" target="_blank">Academy Software Foundation (ASFW)</a>
-                            </p>
-
-                            <h4 style="line-height:0;">Timeline</h4>
-                            <p>
-                                Summer 2025 • 4 weeks
-                            </p>
-                    </div>
-
-                    <div style="width:450px; display:flex; flex-direction: column; justify-content: center; text-align: center; gap:10px; align-items: center;">
-                        <img src="assets/slp_final.jpg" style="border-radius: 20px; width: 100%;">
-                        <div style="display: flex; flex-direction: row; align-items: center; gap:10px;">
-                            <a href="#results">Go to Final Video</a>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <hr class="solid">
-            </div>
-
-            <div class="flex-container" id="context">
-                <h5> PREVIOUS WORK</h5>
-                <h3 style="margin-bottom: 15px;">Context</h3>
-                <p style="margin-right: 3rem;">
-                    Previous to this project, I had minimal experience with 3D modeling and animation. I had created my first Maya model, a model of <a href="../room-model/">my room</a>, a couple weeks prior, but had never modeled a person or character. 
-                    I had no experience with creating a rig or animating either. Although this was a quite a large project to take on at the level I was at, I believed the best way to learn was by diving straight in and doing.
-                </p>
-
-                <hr class="solid">
-            </div>
-
-            <div class="flex-container" id="design-and-model">
-                <h5>STEP ONE</h5>
-                <h3>Character Design and Modeling</h3>
-
-                <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                    
-                    <div style="display: flex; flex-direction: column;">
-                        <p>
-                            The first step of this project was designing the character. I modeled my base character after myself.
-                            After designing the character, I moved on to modeling it in 3D. I used different techniques including starting from a primitive, quad drawing, and sculpting to create the figure of my character.
-                        </p>
-                        <div style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center;">
-                            <img src="assets/character_design_2.png" width="45%">
-                            <img src="assets/character_design_1.png" width="45%">
-                            <img src="assets/body_1.png" width="18.5%">
-                            <img src="assets/body_2.png" width="18.5%">
-                            <img src="assets/body_3.png" width="19.5%">
-                            <img src="assets/foot.png" width="35%">
-                            <img src="assets/head_1.png" width="36%">
-                            <img src="assets/head_2.png" width="32%">
-                            <img src="assets/with_texture.png" width="27.5%">
-                        </div>
-                    </div>
-                </div>
-                <hr class="solid">
-            </div>
-
-            <div class="flex-container" id="rig-and-walk">
-                <h5>STEP TWO</h5>
-                <h3>Rigging and Walk Cycle</h3>
-
-                <div style="display: flex; flex-direction: row; justify-content: space-between;">
-
-                    <div style="width: 50%">
-                        <p>
-                            Once my character was modeled and textured, I moved onto rigging and animating a walk cycle. I used a basic Human IK rig to set up the skeleton and then used keyframe animation to create a looping walk cycle.
-                            <br>
-                            <br>
-                            I worked with weight painting to create more natural movements, specifically in the clothing and the hair. It took a few iterations to get from a very jittery initial walk to a smoother final walk.
-                        </p>
-                    </div>
-
-                    <video controls style="width: 45%">
-                        <source src="assets/rigging_and_walk_cycle.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <hr class="solid">
-            </div>
-
-            <div class="flex-container" id="environment">
-                <h5>STEP THREE</h5>
-                <h3>Environment</h3>
-
-                <div style="display: flex; flex-direction: column;">
-                        <p>
-                            Lastly, I created the environment for my character to walk in. I chose Wayland Arch, the dorm I lived in sophomore year at Brown University. 
-                            It has a pretty distinctive architecture and provided a good setting for my character to walk in. <br> <br> This gave me more experience in working with skydomes for lighting and adding additional lights to create a more realistic scene. I also experiemented with texture for the first time. This included texturing the building, trees, and my character's face.
-                        </p>
-                        <div style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center;">
-                            <img src="assets/untextured_building.png" width="58%">
-                            <img src="assets/texture_building.png" width="39%">
-                            <img src="assets/tree.png" width="40%">
-                            <img src="assets/slp_final.jpg" width="58%">
-                        </div>
-                    </div>
-                <hr class="solid">
-            </div>
-
-            <div class="flex-container" id="results" style="padding-bottom: 100px;">
-                <h5>FINAL</h5>
-                <h3 style="padding-bottom:10px">Results</h3>
-
-                <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                    
-                    <div style="display: flex; flex-direction: column; width: 45%">
-                        <h4>Takeaways</h4>
-                        <p>
-                            This was a really interesting project that really pushed me to learn as much as I could about 3D modeling and animating in a short, four-week timeline. I am proud of the work I was able to put together in this time frame.
-                            It opened my eyes to the possibilities of 3D animation and what can be done to create realistic, high-fidelity animations. If I were to continue on this project, I would work on the textures in the character to make them more lifelike.
-                            I look forward to doing more in Maya in the future.
-                        </p>
-
-                    </div>
-
-                    <video controls style="width:50%">
-                        <source src="assets/final_1.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
+        <div>
+            <img src="assets/character_design_1.png" alt="Character design concept, alternate view">
+            <p class="cs-caption">Concept, alternate view</p>
+        </div>
+        <div>
+            <img src="assets/with_texture.png" alt="Fully modeled and textured character">
+            <p class="cs-caption">Fully modeled &amp; textured</p>
         </div>
     </div>
+
+    <div class="cs-img-grid-compact">
+        <div>
+            <img src="assets/body_1.png" alt="Early body modeling pass">
+            <p class="cs-caption">Body: pass one</p>
+        </div>
+        <div>
+            <img src="assets/body_2.png" alt="Mid body modeling pass">
+            <p class="cs-caption">Body: pass two</p>
+        </div>
+        <div>
+            <img src="assets/body_3.png" alt="Refined body modeling pass">
+            <p class="cs-caption">Body: refined</p>
+        </div>
+        <div>
+            <img src="assets/head_1.png" alt="Head modeling, early pass">
+            <p class="cs-caption">Head: early pass</p>
+        </div>
+        <div>
+            <img src="assets/head_2.png" alt="Head modeling, refined pass">
+            <p class="cs-caption">Head: refined pass</p>
+        </div>
+        <div>
+            <img src="assets/foot.png" alt="Foot modeling detail">
+            <p class="cs-caption">Foot detail</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ④ RIGGING AND WALK CYCLE
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-white" id="rig-and-walk">
+    <div class="cs-text-image">
+
+        <div class="cs-ti-text">
+            <span class="section-label">Step Two</span>
+            <h3>Rigging and Walk Cycle</h3>
+            <p>Once my character was modeled and textured, I moved on to rigging and animating a walk cycle. I used a basic Human IK rig to set up the skeleton, then keyframe animation to create a looping walk.</p>
+            <p>I worked with weight painting to get more natural movement, especially in the clothing and hair. It took a few iterations to go from a jittery initial walk to a smoother final one.</p>
+        </div>
+
+        <div class="cs-ti-image">
+            <video controls style="width:100%; border-radius:16px; display:block;">
+                <source src="assets/rigging_and_walk_cycle.mp4" type="video/mp4">
+            </video>
+            <p class="cs-caption">The looping walk cycle, from rig to final motion</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑤ ENVIRONMENT
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-tinted" id="environment">
+    <div class="cs-img-section-header">
+        <span class="section-label">Step Three</span>
+        <h3>Environment</h3>
+        <p style="font-family:'inter',sans-serif; font-weight:300; font-size:17px; color:rgba(0,0,0,0.75); max-width:760px; margin-top:16px;">
+            Lastly, I built the environment for my character to walk through. I chose Wayland Arch, the dorm I lived in sophomore year at Brown, which has distinctive architecture and made for a good setting. This step gave me my first real experience working with skydomes and additional lights for a more realistic scene, and my first time texturing anything, including the building, the trees, and my character's face.
+        </p>
+    </div>
+
+    <div class="cs-img-grid-compact">
+        <div>
+            <img src="assets/untextured_building.png" alt="Untextured model of Wayland Arch">
+            <p class="cs-caption">Wayland Arch, untextured</p>
+        </div>
+        <div>
+            <img src="assets/texture_building.png" alt="Textured model of Wayland Arch">
+            <p class="cs-caption">Wayland Arch, textured</p>
+        </div>
+        <div>
+            <img src="assets/tree.png" alt="Textured tree model in the environment">
+            <p class="cs-caption">Textured tree in the scene</p>
+        </div>
+        <div>
+            <img src="assets/slp_final.jpg" alt="Final rendered environment with lighting and character">
+            <p class="cs-caption">Final lit &amp; rendered environment</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑥ RESULTS
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-white" id="results">
+    <div class="cs-text-image">
+
+        <div class="cs-ti-text">
+            <span class="section-label">Final</span>
+            <h3>Results &amp; Takeaways</h3>
+            <p>This project pushed me to learn as much as I could about 3D modeling and animation in a short, four-week timeline, and I'm proud of what I put together in that time. It opened my eyes to what's possible with 3D animation and what it takes to get to realistic, high-fidelity results.</p>
+            <p>If I continued this project, I'd work more on the character's textures to make them more lifelike. I'm looking forward to doing more in Maya going forward.</p>
+        </div>
+
+        <div class="cs-ti-image">
+            <video controls style="width:100%; border-radius:16px; display:block;">
+                <source src="assets/final_1.mp4" type="video/mp4">
+            </video>
+            <p class="cs-caption">Final render: character walking through the Wayland Arch environment</p>
+        </div>
+
+    </div>
+</section>
+
 </body>
 
+<!-- ─── FOOTER ─────────────────────────────────────────── -->
 <footer>
     <div class="social-links">
         <a href="https://www.linkedin.com/in/apoorva-talwalkar-b5b3b82a0/" target="_blank">

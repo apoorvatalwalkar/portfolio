@@ -653,7 +653,7 @@ hr.divider {
 
 /* Remove .cs-header-img-wrap entirely for a color-only header */
 
-.cs-header h1 { animation: fadeInUp 0.8s ease-out 0.1s both; }
+.cs-header h1 { margin-bottom: 18px; animation: fadeInUp 0.8s ease-out 0.1s both; }
 
 .cs-subtitle {
     font-family: "inter", sans-serif;
@@ -766,6 +766,17 @@ hr.divider {
     gap: 20px;
 }
 
+/* Dense strip for process shots / iterations — packs as many
+   thumbnails per row as fit (minimum 130px each) so a batch of
+   related images reads as one compact row instead of stacking
+   into several tall grid rows. Wraps on its own as the viewport
+   narrows, no extra media query needed. */
+.cs-img-grid-compact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 14px;
+}
+
 .cs-img-stack { display: flex; flex-direction: column; gap: 20px; }
 
 .cs-img-grid-2 img,
@@ -776,6 +787,13 @@ hr.divider {
     aspect-ratio: 4/3;
     display: block;
 }
+.cs-img-grid-compact img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    display: block;
+}
 .cs-img-grid-featured > img {
     width: 100%;
     border-radius: 12px;
@@ -784,6 +802,35 @@ hr.divider {
     max-height: 500px;
     display: block;
 }
+/* Swatch grid — for reference/spec panels (style guides, palettes,
+   type specimens) that vary wildly in aspect ratio and shouldn't be
+   cropped. Each card is a fixed height with the image contained and
+   centered inside, rather than forced to fill via object-fit:cover. */
+.cs-swatch-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.cs-swatch-card {
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    padding: 20px;
+    height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cs-swatch-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+@media (max-width: 768px) {
+    .cs-swatch-grid { grid-template-columns: 1fr; }
+}
+
 .cs-img-stack img {
     width: 100%;
     border-radius: 12px;
@@ -947,6 +994,19 @@ hr.divider {
 }
 .cs-card-tinted h4 { margin-top: 0; margin-bottom: 10px; }
 .cs-card-tinted p  { font-size: 15px; margin: 0; }
+.cs-card-tinted ul {
+    padding-left: 18px;
+    margin: 0;
+}
+.cs-card-tinted li {
+    font-family: "inter", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(0,0,0,0.75);
+    margin-bottom: 10px;
+}
+.cs-card-tinted li:last-child { margin-bottom: 0; }
 
 @media (min-width: 600px) and (max-width: 900px) {
     .cs-three-col { grid-template-columns: 1fr 1fr; }

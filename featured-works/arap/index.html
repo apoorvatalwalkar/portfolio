@@ -1,106 +1,130 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="../../styles.css">
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARAP</title>
     <link rel="stylesheet" href="https://use.typekit.net/pbk3iay.css">
+    <link rel="stylesheet" href="../../styles.css">
 </head>
-<div class="topnav">
-    <a href="../../" style="height:110%"> <img src="../../assets/sign.png" height="100%" style="opacity: 100%;" ></a>
-    <div style="
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        ">
-        <a style="margin-left: 15px;margin-right:15px" href="../../">Home</a>
-        <a style="margin-left: 15px;margin-right:15px" href="../../archive.html">Archive</a>
-        <a style="margin-left: 15px;margin-right:15px" href="../../art.html">Art</a>
-        <a style="margin-left: 15px;margin-right:15px" href="../../assets/Apoorva Talwalkar Resume.pdf" target="_blank">Resume</a>
-        <a style="margin-left: 15px;margin-right:10px" href="../../about.html">About</a>
 
-        </div>
+<!-- ─── NAV ───────────────────────────────────────────── -->
+<div class="topnav">
+    <a href="../../" style="height:110%">
+        <img src="../../assets/sign.png" height="100%" alt="home">
+    </a>
+    <div style="display:flex; flex-direction:row; justify-content:space-evenly;">
+        <a style="margin-left:15px; margin-right:15px" href="../../">Home</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../archive.html">Archive</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../art.html">Art</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../assets/Apoorva Talwalkar Resume.pdf" target="_blank">Resume</a>
+        <a style="margin-left:15px; margin-right:10px"  href="../../about.html">About</a>
+    </div>
 </div>
-<div class="header">
+
+<!-- ═══════════════════════════════════════════════════════
+     ① HEADER
+════════════════════════════════════════════════════════ -->
+<header class="cs-header">
+
+    <div class="cs-header-img-wrap">
+        <img src="assets/armadillo_wave.gif" alt="Armadillo mesh deformed using the ARAP algorithm">
+    </div>
+
     <h1>ARAP</h1>
-    <h2>As Rigid As Possible Surface Modeling</h2>
-</div>
+    <p class="cs-subtitle">As-Rigid-As-Possible Surface Modeling</p>
+
+    <div class="cs-meta-row">
+        <div>
+            <span class="cs-meta-key">Project Scope</span>
+            <span class="cs-meta-val">Mesh Deformation Algorithm</span>
+        </div>
+        <div>
+            <span class="cs-meta-key">Language</span>
+            <span class="cs-meta-val">C++</span>
+        </div>
+        <div>
+            <span class="cs-meta-key">Timeline</span>
+            <span class="cs-meta-val">April 2025</span>
+        </div>
+    </div>
+
+    <div class="cs-header-ctas">
+        <a class="cs-btn cs-btn-blue" href="#results">View Results</a>
+        <a class="cs-btn" href="https://igl.ethz.ch/projects/ARAP/arap_web.pdf" target="_blank">Read the Paper</a>
+    </div>
+
+</header>
 
 <body>
 
-    <div class="wrapper">
-        <div class="contents">
-        
-            <a href="#context">Context</a>
-            <a href="#understanding">Understanding ARAP</a>
-            <a href="#results">Results</a>
+<!-- ═══════════════════════════════════════════════════════
+     ② CONTEXT
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-white" id="context">
+    <span class="section-label">Background</span>
+    <h3>Context</h3>
+    <p>For this project, I implemented the <a href="https://igl.ethz.ch/projects/ARAP/arap_web.pdf" target="_blank">As-Rigid-As-Possible Surface Modeling paper</a> to build a system for <strong>user-interactive deformation of 3D meshes</strong>. In this system, mesh vertices can be re-positioned by clicking and dragging, and the rest of the mesh updates in response so that it moves as-rigidly-as-possible, meaning the deformation stays close to a rigid transformation. The end result is a deformation that looks physically plausible, as if the mesh has an underlying rig or skeletal armature.</p>
+</section>
 
 
-        </div> 
-        
-    <div style="display: flex; flex-direction: column;">
+<!-- ═══════════════════════════════════════════════════════
+     ③ UNDERSTANDING ARAP
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-tinted" id="understanding">
+    <span class="section-label">Getting Started</span>
+    <h3>Understanding ARAP</h3>
+    <p>ARAP is essentially a large optimization problem. It works by enforcing local rigidity, minimizing a non-linear energy function that penalizes deviations from rigid transformations between neighboring mesh elements, like triangles. At the atomic level, the paper defines rigidity as follows:</p>
 
-    <div class="flex-container" id="context">
-        <h5>BACKGROUND</h5>
-        <h3 style="margin-bottom: 15px;">Context</h3>
-        <p style="margin-right: 3rem;">
-            For this project, I implemented the <a href="https://igl.ethz.ch/projects/ARAP/arap_web.pdf" targe="_blank">As-Rigid-As-Possible Suface Modeling Paper</a> to model a system for <b>user-interactive deformation of 3D meshes</b>.
-            In this system, mesh vertices can be re-positioned by clicking and dragging. The system will update the rest of the mesh in response to these user interactions such that it moves as-rigidly-as-possible (i.e. the deformation it exhibits is close to a rigid transformation). 
-            The end result is a deformation that looks physically-plausible, as if the mesh has an underlying rig / skeletal armature.
-        </p> 
-
-
-        <hr class="solid">
+    <div class="cs-bigtext-left" style="max-width:760px; margin-top:40px;">
+        <p class="cs-statement">The surface of the object is covered with small, overlapping cells. An ideal deformation seeks to keep the transformation for the surface in each cell as rigid as possible.</p>
+        <span class="cs-attribution">From the ARAP paper</span>
     </div>
+</section>
 
-    <div class="flex-container" id="understanding">
-        <h5>GETTING STARTED</h5>
-        <h3>Understanding ARAP</h3>
-        <P>
-            ARAP is essentially a large optimization problem. It works by enforcing local rigidity. It minimizes a non-linear energy function that penalizes deviations from rigid transformations between neighboring mesh elements (e.g., triangles).
-            At the atomic level the paper defines rigidity as:
-        </P>
-        <p style="padding:10px 100px">
-            The surface of the object is covered with small overlapping cells. An ideal deformation seeks to keep the transformation for the surface in each cell
-            as rigid as possible. Overlap of the cells is necessary to avoid surface stretching or shearing at the boundary of the cells.
+
+<!-- ═══════════════════════════════════════════════════════
+     ④ RESULTS
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-white" id="results">
+    <div class="cs-img-section-header">
+        <span class="section-label">Final</span>
+        <h3>Results</h3>
+        <p style="font-family:'inter',sans-serif; font-weight:300; font-size:17px; color:rgba(0,0,0,0.75); max-width:760px; margin-top:16px;">
+            Here are some of the simulations I was able to run.
         </p>
-        <hr class="solid">
     </div>
 
-    <div class="flex-container" id="results" style="padding-bottom: 100px;">
-        <h5>FINAL</h5>
-        <h3 style="padding-bottom:10px">Results</h3>
-        <p>Here are some of the simulations I was able to run!</p>
-
-        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top:20px">
-            <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
-                <img src="assets/armadillo_wave.gif" width="100%" style="border-radius: 10px;">
-            </div>
-            <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; width: 48%">
-                <img src="assets/teapot.gif" width="100%" style="border-radius: 10px;">
-            </div>
-
+    <div class="cs-img-grid-2">
+        <div>
+            <img src="assets/armadillo_wave.gif" alt="Armadillo mesh deformed using ARAP">
+            <p class="cs-caption">Armadillo mesh deformation</p>
+        </div>
+        <div>
+            <img src="assets/teapot.gif" alt="Teapot mesh deformed using ARAP">
+            <p class="cs-caption">Teapot mesh deformation</p>
         </div>
     </div>
-</div>
-</div>
+</section>
+
 </body>
 
+<!-- ─── FOOTER ─────────────────────────────────────────── -->
 <footer>
     <div class="social-links">
-                <a href="https://www.linkedin.com/in/apoorva-talwalkar-b5b3b82a0/" target="_blank">
-                    <img src="../../assets/linkedin_logo.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:apoorva_talwalkar@brown.edu" target="_blank">
-                    <img src="../../assets/gmail_logo.png" alt="Email">
-                </a>
-                <a href="https://www.instagram.com/artby_apoorva/" target="_blank">
-                    <img src="../../assets/intagram_logo.png" alt="Instagram">
-                </a>
-                <a href="https://github.com/apoorvatalwalkar" target="_blank">
-                    <img src="../../assets/github_logo.png" alt="Github" width="50%">
-                </a>
-            </div>
+        <a href="https://www.linkedin.com/in/apoorva-talwalkar-b5b3b82a0/" target="_blank">
+            <img src="../../assets/linkedin_logo.png" alt="LinkedIn">
+        </a>
+        <a href="mailto:apoorva_talwalkar@brown.edu" target="_blank">
+            <img src="../../assets/gmail_logo.png" alt="Email">
+        </a>
+        <a href="https://www.instagram.com/artby_apoorva/" target="_blank">
+            <img src="../../assets/intagram_logo.png" alt="Instagram">
+        </a>
+        <a href="https://github.com/apoorvatalwalkar" target="_blank">
+            <img src="../../assets/github_logo.png" alt="Github" width="50%">
+        </a>
+    </div>
     <div class="credit">
         <h5>Designed and Coded by Apoorva Talwalkar</h5>
     </div>

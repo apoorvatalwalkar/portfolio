@@ -1,159 +1,195 @@
-  <!-- TO RUN IN BROWSER:
-    1. Install vscode extension Name: open in `browser open-in-browser` by TechER
-    2. Right click html file and either run in default browser or another browser
-  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Redesign</title>
+    <link rel="stylesheet" href="https://use.typekit.net/pbk3iay.css">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
 
-  
+<!-- ─── NAV ───────────────────────────────────────────── -->
+<div class="topnav">
+    <a href="../../" style="height:110%">
+        <img src="../../assets/sign.png" height="100%" alt="home">
+    </a>
+    <div style="display:flex; flex-direction:row; justify-content:space-evenly;">
+        <a style="margin-left:15px; margin-right:15px" href="../../">Home</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../archive.html">Archive</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../art.html">Art</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../assets/Apoorva Talwalkar Resume.pdf" target="_blank">Resume</a>
+        <a style="margin-left:15px; margin-right:10px"  href="../../about.html">About</a>
+    </div>
+</div>
 
-  <!DOCTYPE html>
-    <html>
-        <link rel = "stylesheet" href="../../styles.css">
-        <head>
-            <title>Responsive Redesign</title>
-            <link rel="stylesheet" href="https://use.typekit.net/pbk3iay.css">
-        </head>
-        <div class="topnav">
-            <a href="../../" style="height:110%"> <img src="../../assets/sign.png" height="100%" style="opacity: 100%;" ></a>
-            <div style="
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                ">
-                <a style="margin-left: 15px;margin-right:15px" href="../../">Home</a>
-                <a style="margin-left: 15px;margin-right:15px" href="../../archive.html">Archive</a>
-                <a style="margin-left: 15px;margin-right:15px" href="../../art.html">Art</a>
-                <a style="margin-left: 15px;margin-right:15px" href="../../assets/Apoorva Talwalkar Resume.pdf" target="_blank">Resume</a>
-                <a style="margin-left: 15px;margin-right:10px" href="../../about.html">About</a>
+<!-- ═══════════════════════════════════════════════════════
+     ① HEADER
+════════════════════════════════════════════════════════ -->
+<header class="cs-header">
 
-                </div>
+    <div class="cs-header-img-wrap">
+        <img src="assets/hero.png" alt="Redesigned Toronto Cupcakes website">
+    </div>
+
+    <h1>Responsive Redesign</h1>
+    <p class="cs-subtitle">Toronto Cupcakes</p>
+
+    <div class="cs-meta-row">
+        <div>
+            <span class="cs-meta-key">Project Scope</span>
+            <span class="cs-meta-val">UX/UI Redesign &amp; Accessibility</span>
         </div>
-        <div class="header">
-            <h1> Responsive Redesign</h1>
-            <h2> Toronto Cupcakes</h2>
+        <div>
+            <span class="cs-meta-key">Medium</span>
+            <span class="cs-meta-val">HTML/CSS</span>
         </div>
-        <body>
-            <div class="wrapper">
-                <div class="contents">
-                    <a href="#context">Context</a>
-                    <a href="#getting-started">Getting Started</a>
-                    <a href="#goals">Goals</a>
-                    <a href="#visual-redesign">Visual Redesign</a>
-                    <a href="#results">Results</a>
+        <div>
+            <span class="cs-meta-key">Timeline</span>
+            <span class="cs-meta-val">April 2025</span>
+        </div>
+    </div>
 
-                </div>
+    <div class="cs-header-ctas">
+        <a class="cs-btn cs-btn-blue" href="https://apoorvatalwalkar.github.io/toronto-cupcakes/" target="_blank">View Live Site</a>
+        <a class="cs-btn" href="#results">View Results</a>
+    </div>
 
-                <div style="display: flex; flex-direction: column;">
-                    <div class="flex-container" id="context">
-                        <h5>CONTEXT</h5>
-                        <h3>About the Project</h3>
-                        <p style="margin-bottom:40px;">
-                            For this project I had to redesign an existing webpage with considerable user or accessibility issues. I decided redesign the Toronto Cupcakes's website. Toronto Cupcakes is a bakery/catering service in Toronto from whom customers can buy and order cupcakes.
-                            Currently, it is hard to determine what the company does upon first glance of their website. My redesign adresses the issues with the current website and creates a stronger brand image for the company, while keeping all of the information.
-                        </p>
-                        <h4 style="text-align: center">Final Redesign</h4>
-                        <img src="assets/preview_desktop.png" width="100%">
-                        <h5 style="text-align: center; margin-top:20px;"><a href="https://apoorvatalwalkar.github.io/toronto-cupcakes/" style="font-weight:400">Go to Website</a></h5>
+</header>
 
-                        
-                        <hr class="solid">
-                    </div>
+<body>
 
-                    <div class="flex-container" id="getting-started">
-                        <h5>GETTING STARTED</h5>
-                        <h3>The Current Website</h3>
-                        <p style="margin-bottom:40px;">
-                            Toronto Cupcakes is a cupcakes services that offers online ordering, delivery, and catering of specialty cupcakes in the Greater Toronto Area. Its homepage
-                            is the place where customers will first go to understand the brand and potentially order cupcakes. It should emphasize its unique features like delivery, specialty cupcakes,
-                            and custom designs and make it easy for customers to place their order as quickly as possible.
+<!-- ═══════════════════════════════════════════════════════
+     ② CONTEXT
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-white" id="context">
+    <span class="section-label">Context</span>
+    <h3>About the Project</h3>
+    <p>For this project, I had to redesign an existing webpage with considerable usability or accessibility issues. I decided to redesign Toronto Cupcakes' website, a bakery and catering service in Toronto where customers can buy and order cupcakes. Currently, it's hard to tell what the company does at first glance of their website. My redesign addresses the issues with the current site and creates a stronger brand image for the company, while keeping all of the original information.</p>
+</section>
 
-                        <h4>Issues</h4>
-                        <p>
-                            While I think the goal of the website should be to efficiently point users to a place where they can order an checkout, the current website doesn't do that effectively.
-                            Not only is it hard to navigate, but the small text and low-contrast choice of colors makes it inaccessible for some users as well. WebAIM found 23 issues of low-contrant colors mainly in
-                            the hyperlinks and footer.
-                        </p>
-                        <img src="assets/problems.png" width="100%">
-                    </div>
 
-                    <div class="flex-container" style="background-color:var(--light-blue); padding-top:50px; padding-bottom:50px;" id="goals">
-                        <h4 style="text-align: center;">GOALS OF THE REDESIGN</h4>
-                        <p style="text-align: center; margin-bottom: 20px; margin-top:5px">Design an interface that attracts the <b>attention of users</b> and focuses it to <b>drive purchases</b></p>
-                        <h5 style="text-align: center;"><b>GAMEPLAN</b></h5>
-                        <ul style="
-                        font-family: aktiv-grotesk, sans-serif;
-                        font-weight: 300;
-                        font-size: 20px;
-                        line-height: 1.2;
-                        margin: 5px 50px">
-                            <li>Give customers easy access to "Order Now" and other important buttons</li>
-                            <li>Create a consistent color palette that builds off the original</li>
-                            <li>Include more enticing images</li>
-                            <li>Introduce a hierarchy for a better flow</li>
-                        </ul>
+<!-- ═══════════════════════════════════════════════════════
+     ③ THE CURRENT WEBSITE
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-tinted" id="getting-started">
+    <div class="cs-img-section-header">
+        <span class="section-label">Getting Started</span>
+        <h3>The Current Website</h3>
+        <p style="font-family:'inter',sans-serif; font-weight:300; font-size:17px; color:rgba(0,0,0,0.75); max-width:760px; margin-top:16px;">
+            Toronto Cupcakes offers online ordering, delivery, and catering of specialty cupcakes across the Greater Toronto Area. Its homepage is the first place customers go to understand the brand and potentially order, so it should emphasize features like delivery, specialty cupcakes, and custom designs, and make it easy to place an order quickly.
+        </p>
+        <h4 style="margin-top:24px;">Issues</h4>
+        <p style="font-family:'inter',sans-serif; font-weight:300; font-size:17px; color:rgba(0,0,0,0.75); max-width:760px;">
+            While the site's goal should be to point users efficiently toward checkout, the current version doesn't do that effectively. It's hard to navigate, and the small text and low-contrast color choices make it inaccessible for some users. WebAIM found 23 issues of low-contrast color, mainly in the hyperlinks and footer.
+        </p>
+    </div>
 
-                    </div>
+    <img src="assets/problems.png" alt="Annotated critique of the original Toronto Cupcakes website's usability and accessibility issues" style="width:100%; border-radius:12px; margin-top:24px; display:block;">
+</section>
 
-                    <div class="flex-container" id="visual-redesign">
-                        <h5>VISUAL REDESIGN</h5>
-                        <h3>Virtual Design Style Guide</h3>
-                        <p>When designing the Virtual Style Guide it was important for me to consider the color palette of the original website. Specifically, I found the pinks to be a good starting point to build of off. 
-                        I also did not want to change the logo since that is essential to the brand. While, I also kept a similar sans-serif font for smaller text, I introduced a more embellished serif text to introduce some variance.
-                        Additionally, all of the text is much larger and easier to read. The buttons stand out more and the colors for hyperlinked text is deeper to fix some of the previously mentioned accessibility issues.
-                        </p>
-                        <img src="assets/visual_guide.png" width="100%">
-                        <h3>Mockups</h3>
-                        <p>
-                            While I think the goal of the website should be to efficiently point users to a place where they can order an checkout, the current website doesn't do that effectively.
-                            Not only is it hard to navigate, but the small text and low-contrast choice of colors makes it inaccessible for some users as well.
-                        </p>
-                    </div>
-                    <div class="flex-container" style="padding: 0px;">
-                        <img src="assets/layouts.png" width="100%" style="align-self: center;">
-                        <hr class="solid">
-                    </div>
 
-                    <div class="flex-container" id="results" style="padding-bottom: 75px">
-                        <h5>FINAL</h5>
-                        <H3>The Result</H3>
-                        <div style="display:flex; justify-content: flex-start; text-align: left;"
-                        
-                        >
-                            <img src="assets/final.png" width="50%">
-                            <div style="display: flex; flex-direction: column; margin-left: 20px" >
-                                <p>The result is a responsive design that has consistent branding, purpose across the whole page, and addresses the accessibility concerns. Check out the final webpage 
-                                    <a href="https://apoorvatalwalkar.github.io/toronto-cupcakes/">here</a>.
-                                </p>
-                                <h4 style="margin-top: 30px; margin-bottom:5px;">
-                                    Takeaways
-                                </h4>
-                                <p>
-                                    This project helped me understand how important accessibility is for projects. Not only does a webpage have to be beautiful, but it should be easy to navigate for all ranges of people across many devices.
-                                    Just because something is legible on your computer, doesn't mean it will translate well onto a phone or tablet. While this project made me incredibly hungry, it was also really fun to design and code!
-                                </p>
+<!-- ═══════════════════════════════════════════════════════
+     ④ GOALS OF THE REDESIGN
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-white" id="goals" style="text-align:center;">
+    <span class="section-label">Goals of the Redesign</span>
+    <p style="font-family:'inter',sans-serif; font-weight:300; font-size:20px; color:#111; max-width:600px; margin:8px auto 24px;">
+        Design an interface that attracts the <strong>attention of users</strong> and focuses it to <strong>drive purchases</strong>.
+    </p>
+    <h4>Gameplan</h4>
+    <ul style="display:inline-block; text-align:left; font-family:'inter',sans-serif; font-weight:300; font-size:18px; line-height:1.6; margin:10px auto 0;">
+        <li>Give customers easy access to "Order Now" and other important buttons</li>
+        <li>Create a consistent color palette that builds on the original</li>
+        <li>Include more enticing images</li>
+        <li>Introduce a hierarchy for a better flow</li>
+    </ul>
+</section>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑤ VISUAL REDESIGN
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-tinted" id="visual-redesign">
+    <span class="section-label">Visual Redesign</span>
+    <h3>Virtual Design Style Guide</h3>
+    <p>When designing the style guide, it was important to consider the color palette of the original website, and I found the pinks to be a good starting point to build from. All of the text is larger and easier to read, the buttons stand out more, and the hyperlink colors are deeper to help fix some of the accessibility issues mentioned above.</p>
+
+    <div class="cs-swatch-grid" style="margin-top:24px;">
+        <div>
+            <div class="cs-swatch-card">
+                <img src="assets/logos.png" alt="Toronto Cupcakes logo variations">
             </div>
-        </body>
-        <footer>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/apoorva-talwalkar-b5b3b82a0/" target="_blank">
-                    <img src="../../assets/linkedin_logo.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:apoorva_talwalkar@brown.edu" target="_blank">
-                    <img src="../../assets/gmail_logo.png" alt="Email">
-                </a>
-                <a href="https://www.instagram.com/artby_apoorva/" target="_blank">
-                    <img src="../../assets/intagram_logo.png" alt="Instagram">
-                </a>
-                <a href="https://github.com/apoorvatalwalkar" target="_blank">
-                    <img src="../../assets/github_logo.png" alt="Github" width="50%">
-                </a>
+            <p class="cs-caption">Kept the original logo since it's essential to the brand</p>
+        </div>
+        <div>
+            <div class="cs-swatch-card">
+                <img src="assets/color_palette.png" alt="Color palette for the redesign">
             </div>
-            <div class="credit">
-                <h5>Designed and Coded by Apoorva Talwalkar</h5>
+            <p class="cs-caption">Built from the original site's pinks, refined for better contrast</p>
+        </div>
+        <div>
+            <div class="cs-swatch-card">
+                <img src="assets/typefaces.png" alt="Typefaces used in the redesign">
             </div>
-        </footer>
-    </html>
+            <p class="cs-caption">A serif for headlines, a clean sans-serif for body text</p>
+        </div>
+        <div>
+            <div class="cs-swatch-card">
+                <img src="assets/buttons.png" alt="Button and card styles used in the redesign">
+            </div>
+            <p class="cs-caption">Bolder, higher-contrast buttons and cards</p>
+        </div>
+    </div>
+
+    <h3 style="margin-top:40px;">Mockups</h3>
+    <p>To make sure the new design held up across devices, I mapped out detailed layouts for desktop, tablet, and mobile, noting specific decisions like flexible grids, reordering content on smaller screens, and keeping key actions like "Order Now" accessible at every size.</p>
+
+    <img src="assets/layouts.png" alt="Annotated desktop, tablet, and mobile layouts showing responsive design decisions" style="width:100%; border-radius:12px; margin-top:16px; display:block;">
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑥ RESULTS
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-white" id="results">
+    <div class="cs-text-image">
+
+        <div class="cs-ti-text">
+            <span class="section-label">Final</span>
+            <h3>The Result</h3>
+            <p>The result is a responsive design with consistent branding and purpose across the whole page that addresses the original accessibility concerns. Check out the final webpage <a href="https://apoorvatalwalkar.github.io/toronto-cupcakes/" target="_blank">here</a>.</p>
+            <p><strong>Takeaways:</strong> This project helped me understand how important accessibility is. A webpage doesn't just need to be beautiful, it needs to be easy to navigate for people across many devices and abilities. Just because something is legible on a computer doesn't mean it will translate well to a phone or tablet. This project also made me incredibly hungry, but it was a lot of fun to design and code!</p>
+        </div>
+
+        <div class="cs-ti-image">
+            <img src="assets/final.png" alt="The redesigned website shown on tablet and phone screens">
+            <p class="cs-caption">The final redesign, shown responsive on tablet and phone</p>
+        </div>
+
+    </div>
+</section>
+
+</body>
+
+<!-- ─── FOOTER ─────────────────────────────────────────── -->
+<footer>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/apoorva-talwalkar-b5b3b82a0/" target="_blank">
+            <img src="../../assets/linkedin_logo.png" alt="LinkedIn">
+        </a>
+        <a href="mailto:apoorva_talwalkar@brown.edu" target="_blank">
+            <img src="../../assets/gmail_logo.png" alt="Email">
+        </a>
+        <a href="https://www.instagram.com/artby_apoorva/" target="_blank">
+            <img src="../../assets/intagram_logo.png" alt="Instagram">
+        </a>
+        <a href="https://github.com/apoorvatalwalkar" target="_blank">
+            <img src="../../assets/github_logo.png" alt="Github" width="50%">
+        </a>
+    </div>
+    <div class="credit">
+        <h5>Designed and Coded by Apoorva Talwalkar</h5>
+    </div>
+</footer>
+
+</html>
