@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study Title</title>
+    <link rel="stylesheet" href="https://use.typekit.net/pbk3iay.css">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<!-- ═══════════════════════════════════════════════════════
+     THIS IS A REFERENCE FILE, NOT A REAL PROJECT PAGE.
+
+     Don't duplicate this whole file into a new project folder.
+     Instead, start a new featured-works/<project>/index.html
+     from scratch and copy in only the numbered template blocks
+     below that your project actually has real content for.
+     Delete everything else — an empty stat row or a "How Might
+     We" card with invented numbers is worse than not having
+     the section at all.
+
+     Divider rule: only put <hr class="divider"> between two
+     consecutive sections that share the same background
+     (white -> white, or tinted -> tinted). Skip it when the
+     background already changes — that's separation enough on
+     its own. This file only includes dividers where that's
+     actually true, so treat their placement here as the model.
+════════════════════════════════════════════════════════ -->
+
+<!-- ─── NAV ───────────────────────────────────────────── -->
+<div class="topnav">
+    <a href="../../" style="height:110%">
+        <img src="../../assets/sign.png" height="100%" alt="home">
+    </a>
+    <div style="display:flex; flex-direction:row; justify-content:space-evenly;">
+        <a style="margin-left:15px; margin-right:15px" href="../../">Home</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../archive.html">Archive</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../art.html">Art</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../assets/Apoorva Talwalkar Resume.pdf" target="_blank">Resume</a>
+        <a style="margin-left:15px; margin-right:10px"  href="../../about.html">About</a>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     ① HEADER
+     The whole header sits on --light-blue, inset from the
+     edges by the 8% padding on .cs-header.
+
+     Hero image: wrap your <img> in .cs-header-img-wrap.
+     The wrapper enforces a fixed 16:7 aspect ratio so every
+     page looks identical no matter the source image size.
+     Change aspect-ratio in the CSS to taste (16/9, 16/6…).
+
+     No hero image? Just delete the .cs-header-img-wrap block.
+════════════════════════════════════════════════════════ -->
+<header class="cs-header">
+
+    <div class="cs-header-img-wrap">
+        <img src="assets/hero.png" alt="Project hero">
+    </div>
+
+    <h1>Project Title</h1>
+    <p class="cs-subtitle">One-sentence description of what this project is and who it's for.</p>
+
+    <div class="cs-meta-row">
+        <div>
+            <span class="cs-meta-key">Project Scope</span>
+            <span class="cs-meta-val">End-to-End Design</span>
+        </div>
+        <div>
+            <span class="cs-meta-key">Role</span>
+            <span class="cs-meta-val">UX Research · UI Design</span>
+        </div>
+        <div>
+            <span class="cs-meta-key">Timeline</span>
+            <span class="cs-meta-val">10 weeks · Fall 2024</span>
+        </div>
+        <div>
+            <span class="cs-meta-key">Collaborators</span>
+            <span class="cs-meta-val">Name, Name, Name</span>
+        </div>
+    </div>
+
+    <div class="cs-header-ctas">
+        <a class="cs-btn cs-btn-blue" href="#" target="_blank">View Prototype</a>
+        <a class="cs-btn" href="https://github.com/" target="_blank">Open GitHub</a>
+    </div>
+
+</header>
+<!-- no divider here: header (tinted) -> Template A (white) already changes background -->
+
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     ② TEMPLATE A — TEXT + IMAGE
+     Default: text left, image right.
+     Add .cs-text-image--flip to put image on the left.
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-white">
+    <div class="cs-text-image">
+
+        <div class="cs-ti-text">
+            <span class="section-label">What We Built</span>
+            <h3>Section Title</h3>
+            <p>Lead paragraph that introduces the key idea of this section. Keep it tight — two or three sentences that orient the reader before going into detail.</p>
+            <p>Supporting paragraph with more context. Use <strong>bold</strong> sparingly for key terms.</p>
+            <a class="cs-btn" href="#">Learn more →</a>
+        </div>
+
+        <div class="cs-ti-image">
+            <img src="assets/placeholder.png" alt="Descriptive alt text">
+            <p class="cs-caption">Optional caption describing what's shown above.</p>
+        </div>
+
+    </div>
+</section>
+<!-- no divider: next section is tinted -->
+
+<!-- TEXT + IMAGE — flipped variant -->
+<section class="cs-section cs-section-tinted">
+    <div class="cs-text-image cs-text-image--flip">
+
+        <div class="cs-ti-image">
+            <img src="assets/placeholder.png" alt="Descriptive alt text">
+        </div>
+
+        <div class="cs-ti-text">
+            <span class="section-label">My Contribution</span>
+            <h3>Feature Name</h3>
+            <p>Flip variant — image on the left, text on the right. Alternate this with the default to keep sections from feeling repetitive.</p>
+            <p>Works well when you want to lead with a visual (gif, diagram, screenshot) and follow up with explanation.</p>
+        </div>
+
+    </div>
+</section>
+<!-- no divider: next section is white -->
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ③ TEMPLATE B — IMAGES ONLY
+════════════════════════════════════════════════════════ -->
+
+<!-- B-1: 2-column grid -->
+<section class="cs-section cs-section-white">
+    <div class="cs-img-section-header">
+        <span class="section-label">Process</span>
+        <h3>Wireframes</h3>
+    </div>
+    <div class="cs-img-grid-2">
+        <div>
+            <img src="assets/placeholder.png" alt="Wireframe screen 1">
+            <p class="cs-caption">Screen one — brief description</p>
+        </div>
+        <div>
+            <img src="assets/placeholder.png" alt="Wireframe screen 2">
+            <p class="cs-caption">Screen two — brief description</p>
+        </div>
+    </div>
+</section>
+<!-- no divider: next section is tinted -->
+
+<!-- B-2: 3-column grid -->
+<section class="cs-section cs-section-tinted">
+    <div class="cs-img-section-header">
+        <span class="section-label">Results</span>
+        <h3>Final Screens</h3>
+    </div>
+    <div class="cs-img-grid-3">
+        <div>
+            <img src="assets/placeholder.png" alt="Screen 1">
+            <p class="cs-caption">Caption one</p>
+        </div>
+        <div>
+            <img src="assets/placeholder.png" alt="Screen 2">
+            <p class="cs-caption">Caption two</p>
+        </div>
+        <div>
+            <img src="assets/placeholder.png" alt="Screen 3">
+            <p class="cs-caption">Caption three</p>
+        </div>
+    </div>
+</section>
+<!-- no divider: next section is white -->
+
+<!-- B-3: featured large + 2 stacked right -->
+<section class="cs-section cs-section-white">
+    <div class="cs-img-section-header">
+        <span class="section-label">Iterations</span>
+        <h3>Before &amp; After</h3>
+    </div>
+    <div class="cs-img-grid-featured">
+        <img src="assets/placeholder.png" alt="Main featured image">
+        <div class="cs-img-stack">
+            <div>
+                <img src="assets/placeholder.png" alt="Detail A">
+                <p class="cs-caption">Detail A</p>
+            </div>
+            <div>
+                <img src="assets/placeholder.png" alt="Detail B">
+                <p class="cs-caption">Detail B</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- no divider: next section is tinted -->
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ④ TEMPLATE C — BIG TEXT ONLY
+════════════════════════════════════════════════════════ -->
+
+<!-- C-1: Centered statement on tinted bg -->
+<section class="cs-section cs-section-tinted cs-bigtext-center">
+    <p class="cs-statement">
+        "You run the first 20 miles with your legs<br>
+        and the last 6.2 with your <em>heart.</em>"
+    </p>
+    <span class="cs-attribution">— Marathon adage</span>
+</section>
+<!-- no divider: next section is white -->
+
+<!-- C-2: Left-aligned pull quote -->
+<section class="cs-section cs-section-white">
+    <div class="cs-bigtext-left">
+        <p class="cs-statement">
+            One clear need was an element of surprise — runners wanted to be engaged and distracted.
+        </p>
+        <span class="cs-attribution">Research insight · User interviews</span>
+    </div>
+</section>
+<hr class="divider"><!-- same background (white -> white) as the next section -->
+
+<!-- C-3: Stat / number callout row -->
+<section class="cs-section cs-section-white">
+    <span class="section-label" style="text-align:center; display:block; margin-bottom:48px;">By the Numbers</span>
+    <div class="cs-stat-row">
+        <div class="cs-stat">
+            <span class="cs-stat-number">12</span>
+            <span class="cs-stat-label">User interviews conducted</span>
+        </div>
+        <div class="cs-stat">
+            <span class="cs-stat-number">3</span>
+            <span class="cs-stat-label">Distinct personas</span>
+        </div>
+        <div class="cs-stat">
+            <span class="cs-stat-number">100h</span>
+            <span class="cs-stat-label">Total project hours</span>
+        </div>
+        <div class="cs-stat">
+            <span class="cs-stat-number">5</span>
+            <span class="cs-stat-label">Usability test participants</span>
+        </div>
+    </div>
+</section>
+<hr class="divider"><!-- same background (white -> white) as the next section -->
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑤ TEMPLATE D — SUBSECTION HEADER LEFT / TEXT RIGHT
+     The heading column is sticky while the body scrolls.
+     Remove position:sticky on .cs-split-head in the CSS
+     if you don't want that behavior.
+════════════════════════════════════════════════════════ -->
+
+<!-- D-1: white background -->
+<section class="cs-section cs-section-white">
+    <div class="cs-split">
+
+        <div class="cs-split-head">
+            <span class="section-label">Research</span>
+            <h3>Research Objectives</h3>
+        </div>
+
+        <div class="cs-split-body">
+            <p>Opening sentence that frames what you were trying to learn or accomplish in this phase.</p>
+            <h4>Goal one</h4>
+            <p>Detail about this objective — what you did, what you found, why it mattered for the design.</p>
+            <h4>Goal two</h4>
+            <p>Detail about this objective. Nest as many h4 + p pairs as needed.</p>
+            <ul>
+                <li>Key finding that informed your design direction</li>
+                <li>Another insight that shaped a specific decision</li>
+                <li>A third point that connects back to your research question</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<!-- no divider: next section is tinted -->
+
+<!-- D-2: tinted background -->
+<section class="cs-section cs-section-tinted">
+    <div class="cs-split">
+
+        <div class="cs-split-head">
+            <span class="section-label">Reflection</span>
+            <h3>Takeaways</h3>
+        </div>
+
+        <div class="cs-split-body">
+            <p>What you learned from this project — about the problem space, your process, or your craft.</p>
+            <p>What you'd do differently with more time, and what that reveals about how you think.</p>
+            <p>Future directions: features you'd explore next, open research questions, or how you'd scale the concept.</p>
+        </div>
+
+    </div>
+</section>
+<!-- no divider: next section is white -->
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑥ TEMPLATE E — THREE TEXT BOXES
+════════════════════════════════════════════════════════ -->
+
+<!-- E-1: outlined cards on white -->
+<section class="cs-section cs-section-white">
+    <span class="section-label" style="margin-bottom:32px; display:block;">Key Insights</span>
+    <div class="cs-three-col">
+
+        <div class="cs-card-outline">
+            <div class="cs-card-icon"></div>
+            <h4>Insight One</h4>
+            <p>Two to three sentences describing this insight, finding, or feature. Keep phrasing parallel across all three cards.</p>
+        </div>
+
+        <div class="cs-card-outline">
+            <div class="cs-card-icon"></div>
+            <h4>Insight Two</h4>
+            <p>Two to three sentences describing this insight, finding, or feature. Keep phrasing parallel across all three cards.</p>
+        </div>
+
+        <div class="cs-card-outline">
+            <div class="cs-card-icon"></div>
+            <h4>Insight Three</h4>
+            <p>Two to three sentences describing this insight, finding, or feature. Keep phrasing parallel across all three cards.</p>
+        </div>
+
+    </div>
+</section>
+<hr class="divider"><!-- same background (white -> white) as the next section -->
+
+<!-- E-2: tinted filled cards on white -->
+<section class="cs-section cs-section-white">
+    <span class="section-label" style="margin-bottom:32px; display:block;">How Might We</span>
+    <div class="cs-three-col">
+
+        <div class="cs-card-tinted">
+            <h4>Question One</h4>
+            <p>…compile surprising and interesting entertainment for runners so they feel engaged and motivated?</p>
+        </div>
+
+        <div class="cs-card-tinted">
+            <h4>Question Two</h4>
+            <p>…give runners access to real-time encouragement from supporters not physically present?</p>
+        </div>
+
+        <div class="cs-card-tinted">
+            <h4>Question Three</h4>
+            <p>…provide supporters the opportunity to feel like part of the race even from far away?</p>
+        </div>
+
+    </div>
+</section>
+<!-- no divider before footer: footer is a separate global component, not a cs-section -->
+
+</body>
+
+<!-- ─── FOOTER ─────────────────────────────────────────── -->
+<footer>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/apoorva-talwalkar-b5b3b82a0/" target="_blank">
+            <img src="../../assets/linkedin_logo.png" alt="LinkedIn">
+        </a>
+        <a href="mailto:apoorva_talwalkar@brown.edu" target="_blank">
+            <img src="../../assets/gmail_logo.png" alt="Email">
+        </a>
+        <a href="https://www.instagram.com/artby_apoorva/" target="_blank">
+            <img src="../../assets/intagram_logo.png" alt="Instagram">
+        </a>
+        <a href="https://github.com/apoorvatalwalkar" target="_blank">
+            <img src="../../assets/github_logo.png" alt="Github" width="50%">
+        </a>
+    </div>
+    <div class="credit">
+        <h5>Designed and Coded by Apoorva Talwalkar</h5>
+    </div>
+</footer>
+
+</html>

@@ -1,149 +1,163 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="../../styles.css">
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Me Noisy</title>
     <link rel="stylesheet" href="https://use.typekit.net/pbk3iay.css">
+    <link rel="stylesheet" href="../../styles.css">
 </head>
-<div class="topnav">
-    <a href="../../" style="height:110%"> <img src="../../assets/sign.png" height="100%" style="opacity: 100%;" ></a>
-    <div style="
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        ">
-        <a style="margin-left: 15px;margin-right:15px" href="../../">Home</a>
-        <a style="margin-left: 15px;margin-right:15px" href="../../archive.html">Archive</a>
-        <a style="margin-left: 15px;margin-right:15px" href="../../art.html">Art</a>
-        <a style="margin-left: 15px;margin-right:15px" href="../../assets/Apoorva Talwalkar Resume.pdf" target="_blank">Resume</a>
-        <a style="margin-left: 15px;margin-right:10px" href="../../about.html">About</a>
 
-        </div>
+<!-- ─── NAV ───────────────────────────────────────────── -->
+<div class="topnav">
+    <a href="../../" style="height:110%">
+        <img src="../../assets/sign.png" height="100%" alt="home">
+    </a>
+    <div style="display:flex; flex-direction:row; justify-content:space-evenly;">
+        <a style="margin-left:15px; margin-right:15px" href="../../">Home</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../archive.html">Archive</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../art.html">Art</a>
+        <a style="margin-left:15px; margin-right:15px" href="../../assets/Apoorva Talwalkar Resume.pdf" target="_blank">Resume</a>
+        <a style="margin-left:15px; margin-right:10px"  href="../../about.html">About</a>
+    </div>
 </div>
-<div class="header">
+
+<!-- ═══════════════════════════════════════════════════════
+     ① HEADER
+════════════════════════════════════════════════════════ -->
+<header class="cs-header">
+
+    <div class="cs-header-img-wrap">
+        <img src="assets/flower.gif" alt="Hand-colored stylized render of a 3D flower animation">
+    </div>
+
     <h1>Color Me Noisy</h1>
-    <h2>Making Computer Animations Look Hand-Drawn</h2>
-</div>
+    <p class="cs-subtitle">Making Computer Animations Look Hand-Drawn</p>
+
+    <div class="cs-meta-row">
+        <div>
+            <span class="cs-meta-key">Project Scope</span>
+            <span class="cs-meta-val">Implementing and Extending an Existing Graphics Paper</span>
+        </div>
+        <div>
+            <span class="cs-meta-key">Class</span>
+            <span class="cs-meta-val">CSCI2240 Advanced Computer Graphics</span>
+        </div>
+        <div>
+            <span class="cs-meta-key">Timeline</span>
+            <span class="cs-meta-val">Final Project · 4 weeks · Spring 2025</span>
+        </div>
+        <div>
+            <span class="cs-meta-key">Collaborators</span>
+            <span class="cs-meta-val">Apoorva Talwalkar, Lexi Henrion, Sherry Zhang, and Vivian Li</span>
+        </div>
+    </div>
+
+    <div class="cs-header-ctas">
+        <a class="cs-btn cs-btn-blue" href="#results">View Results</a>
+        <a class="cs-btn" href="https://github.com/Lenrion/ColorMeNoisy" target="_blank">Open GitHub</a>
+    </div>
+
+</header>
 
 <body>
 
-    <div class="wrapper">
+<!-- ═══════════════════════════════════════════════════════
+     ② CONTEXT
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-white" id="context">
+    <div class="cs-text-image">
 
-        <div class="contents">
-
-            <a href="#context">Context</a>
-            <a href="#features">Features</a>
-            <a href="#my-contribution">My Contribution</a>
-            <a href="#results">Results</a>
-
+        <div class="cs-ti-text">
+            <span class="section-label">Previous Work</span>
+            <h3>Context</h3>
+            <p>For our final project in Advanced Computer Graphics, my three classmates and I implemented <em>Color Me Noisy: Example-based Rendering of Hand-colored Animations with Temporal Noise Control</em>, a paper by J. Fišer, M. Lukáč, and O. Jamriška of CTU Prague, M. Čadík of Brno University of Technology, Y. Gingold of George Mason University, P. Asente of Adobe Research, and D. Sýkora of CTU Prague.</p>
+            <p>The paper proposes a method for rendering 3D animations with a 2D hand-colored feel by mimicking the texture of a hand-painted reference image, frame by frame, while keeping the result temporally consistent.</p>
+            <a class="cs-btn" href="https://dcgi.fel.cvut.cz/home/sykorad/cmn.html" target="_blank">Read the paper →</a>
         </div>
 
-        <div style="display: flex; flex-direction: column;">
-
-            <div class="flex-container" id="overview">
-
-                <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: stretch; gap:50px">
-                    <div style="display:flex; flex-direction: column;">
-                        <h5>OVERVIEW</h5>
-                        <h3 style="margin-bottom: 10px;">Background</h3>
-                            <h4 style="line-height:0;">Collaborators</h4>
-                            <p>
-                                Apoorva Talwalkar, Lexi Henrion, Sherry Zhang, and Vivian Li
-                            </p>
-
-                            <h4 style="line-height:0;">Class</h4>
-                            <p>
-                                CSCI2240 Advanced Computer Graphics
-                            </p>
-
-                            <h4 style="line-height:0;">Timeline</h4>
-                            <p>
-                                Final Project • Spring 2025 • 4 weeks
-                            </p>
-                    </div>
-
-                    <div style="width:450px; display:flex; flex-direction: column; justify-content: center; text-align: center; gap:10px; align-items: center;">
-                        <img src="assets/flower.png" style="border-radius: 20px; width: 110%;">
-                        <div style="display: flex; flex-direction: row; align-items: center; gap:10px;">
-                            <a href="#results">Go to Final Video</a>
-                            <p> | </p>
-                            <a href="https://github.com/Lenrion/ColorMeNoisy" target="_blank" style="align-items: center;">Open Github</a>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <hr class="solid">
-            </div>
-
-            <div class="flex-container" id="context">
-                <h5> PREVIOUS WORK</h5>
-                <h3 style="margin-bottom: 15px;">Context</h3>
-                <p style="margin-right: 3rem;">
-                    For our final project in Advanced Computer Graphics, me and three of my classmates decided to implement the <i>olor Me Noisy: Example-based Rendering of Hand-colored Animations with Temporal Noise Control</i> paper by researchers J. Fišer from CTU in Prague, 
-                    M. Lukác from CTU in Prague, O. Jamriška from CTU in Prague, M. Čadík from the Brno University of Technology, Y. Gingold from George Mason University, P. Asente from Adobe Research, and D. Sýkora from CTU in Prague. 
-                    The paper proposes a method for rendering 3D animations with a 2D hand-colored feel by mimicking the textures of a reference texture. You can find the paper at <a href="https://dcgi.fel.cvut.cz/home/sykorad/cmn.html">this link</a>.
-                </p>
-
-                <hr class="solid">
-            </div>
-
-            <div class="flex-container" id="features">
-                <h5>OVERVIEW</h5>
-                <h3>Implementation</h3>
-                <p>
-                    Here is a high-level overview of the overall implementation:
-                    <ol>
-                        <li>Predeform</li>
-                        <li>Image Pyramids</li>
-                        <li>Upsample / Downsample</li>
-                        <li>Patch Match</li>
-                        <li>Results</li>
-                    </ol>
-                    <p>
-                        At a high level, our pipeline mirrors the paper’s: given a target animation frame and a reference texture, we synthesize a noisy, hand-rendered-looking version by progressively refining from coarse to fine image scales. This helps reduce temporal flicker and preserves style consistency.
-                    </p>
-                </p>
-                <hr class="solid">
-            </div>
-
-            <div class="flex-container" id="my-contribution">
-                <h5>WHAT I DID</h5>
-                <h3 style="padding-bottom:10px">My Contribution</h3>
-
-                <h4>Pre-Deformation</h4>
-                <p>I handled the predeformation algorithm implementation, which involved randomly deforming the input texture image using a vector map. This prevents the texture for matching exactly across multiple frames, adding to the hand-drawn effect.
-                    The resulting deformed texture is then downsampled and then matched to the input animation. 
-                </p>
-                <img src="assets/predeformation.png" width="100%">
-
-                <hr class="solid">
-            </div>
-            <div class="flex-container" id="results" style="padding-bottom: 100px;">
-                <h5>FINAL</h5>
-                <h3 style="padding-bottom:10px">Results</h3>
-
-                <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                    
-                    <div style="display: flex; flex-direction: column; width: 45%">
-                        <h4>Takeaways</h4>
-                        <p>
-                            I thought this project was a great opportunity to learn more about post-processing techniques in computer graphics and how computer graphics and animation can be used together.
-                            I loved running this algorithm on my teammate's animations and seeing the results, I'd love to make some of my own animations in the future and run this on them as well.
-                        </p>
-
-                    </div>
-
-                    <video controls style="width:50%">
-                        <source src="assets/final_vid.mov" type="video/mp4">
-                    </video>
-                </div>
-            </div>
+        <div class="cs-ti-image">
+            <img src="assets/flower.png" alt="Original 3D rendered flower animation, before stylization">
+            <p class="cs-caption">The original 3D animation, before the hand-colored effect is applied</p>
         </div>
+
     </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ③ IMPLEMENTATION OVERVIEW
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-tinted">
+    <div class="cs-split">
+
+        <div class="cs-split-head">
+            <span class="section-label">Overview</span>
+            <h3>Implementation</h3>
+        </div>
+
+        <div class="cs-split-body">
+            <p>At a high level, our pipeline mirrors the paper's: given a target animation frame and a reference texture, we synthesize a noisy, hand-rendered-looking version by progressively refining from coarse to fine image scales. This reduces temporal flicker between frames while preserving the hand-painted style.</p>
+            <ul>
+                <li>Pre-deformation of the reference texture</li>
+                <li>Image pyramid construction</li>
+                <li>Upsampling / downsampling across pyramid levels</li>
+                <li>Patch match texture synthesis</li>
+                <li>Compositing the final stylized frames</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ④ MY CONTRIBUTION — PRE-DEFORMATION
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-white" id="my-contribution">
+    <div class="cs-text-image cs-text-image--flip">
+
+        <div class="cs-ti-image">
+            <img src="assets/predeformation.png" alt="Original reference texture compared to two randomly pre-deformed variants">
+            <p class="cs-caption">Left: the original reference texture. Center &amp; right: two random pre-deformations used to vary the hand-painted look across frames</p>
+        </div>
+
+        <div class="cs-ti-text">
+            <span class="section-label">What I Did</span>
+            <h3>Pre-Deformation</h3>
+            <p>I implemented the pre-deformation algorithm, which randomly warps the input reference texture using a vector field. This keeps the texture from matching exactly across frames, which is what gives the final animation its hand-drawn feel instead of a static, pasted-on look.</p>
+            <p>The deformed texture is then downsampled and matched against the input animation, frame by frame, feeding into the patch match step that generates the final stylized result.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑤ RESULTS
+════════════════════════════════════════════════════════ -->
+<section class="cs-section cs-section-tinted" id="results">
+    <div class="cs-text-image">
+
+        <div class="cs-ti-text">
+            <span class="section-label">Final</span>
+            <h3>Results &amp; Takeaways</h3>
+            <p>I thought this project was a great opportunity to learn more about post-processing techniques in computer graphics and how graphics and animation can be combined. I loved running this algorithm on my teammates' animations and seeing the results come out — I'd love to make some of my own animations in the future and run this pipeline on them as well.</p>
+        </div>
+
+        <div class="cs-ti-image">
+            <video controls style="width:100%; border-radius:16px; display:block;">
+                <source src="assets/final_vid.mov" type="video/mp4">
+            </video>
+            <p class="cs-caption">Final stylized output — a hand-colored render of the flower animation</p>
+        </div>
+
+    </div>
+</section>
+
 </body>
 
+<!-- ─── FOOTER ─────────────────────────────────────────── -->
 <footer>
     <div class="social-links">
         <a href="https://www.linkedin.com/in/apoorva-talwalkar-b5b3b82a0/" target="_blank">
